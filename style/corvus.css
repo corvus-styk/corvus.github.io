@@ -25,7 +25,6 @@
     z-index: 1000;
     background-color: transparent;
     padding: 1rem 2rem;
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); */
 }
 
 .top, .about, .genres, .mission, .footer {
@@ -41,7 +40,6 @@
     padding: 5rem 0rem 5rem 0rem;
 }
 .top {
-    /* filter: brightness(0.7); */
     height: 100vh;
     background-image: url('../img/bg.png');
     background-size: auto;     /* 画面全体にフィットさせる */
@@ -66,22 +64,18 @@
     display: flex;
     width: -webkit-fill-available;
     flex-direction: row;
-    /* padding: 2rem; */
     align-content: center;
     align-items: center;
 }
 .about-graphics {
-    /* position: relative; */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: 100vh; */
     flex-direction: column;
     width: -webkit-fill-available;
 }
 
 #top {
-    /* background-image: url('../img/bg.png'); */
     background-size: auto;     /* 画面全体にフィットさせる */
     background-position: center;
     position: absolute;
@@ -107,36 +101,6 @@
     }
 
 }
-
-#blur-bg {
-    position: absolute;
-    width: 100%;
-    height: 1080px;
-    left: 0px;
-    top: 0px;
-    overflow: visible;
-}
-#bg {
-    position: absolute;
-    width: 100%;
-    height: 1080px;
-    left: 0px;
-    top: 0px;
-    overflow: visible;
-}
-#bg-frame {
-    opacity: 0.5;
-    fill: rgba(39,22,11,1);
-}
-.bg-frame {
-    mix-blend-mode: multiply;
-    position: absolute;
-    overflow: visible;
-    width: 100%;
-    height: 1080px;
-    left: 0px;
-    top: 0px;
-}
 .about-graphics-items {
     margin: 81px 10px;
     position: absolute;
@@ -148,6 +112,7 @@
     align-content: center;
     justify-content: center;
     align-items: center;
+        margin-top: 5%;
 }
 
 .about-graphics-items-row {
@@ -180,7 +145,6 @@
     shape-rendering: auto;
 }
 .about-circle {
-    /* position: absolute; */
     overflow: visible;
     width: 50%;
     aspect-ratio: 1 / 1;
@@ -189,23 +153,24 @@
 }
 #about-graphics-text {
     position: relative;
+        padding-top: 15px;
     border: 0;
-    bottom: 280px;
+    /* bottom: 280px; */
     overflow: visible;
-    width: 581px;
-    height: 145px;
-    line-height: 32px;
+    width: 70%;
+    /* height: 145px; */
+    line-height: 2;
     text-align: center;
     font-family: Hiragino Kaku Gothic ProN;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
+    font-size: clamp(8px, 1vw, 15px);
     color: rgba(255,255,255,1);
 }
 #about-graphics-link {
     position: relative;
     border: 0;
-    bottom: 250px;
+    /* bottom: 250px; */
     overflow: visible;
     width: 678px;
     height: 27px;
@@ -219,7 +184,7 @@
     font-family: Hiragino Kaku Gothic ProN;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
+font-size: clamp(10px, 2vw, 30px);
     color: rgba(255,255,255,1);
 }
 #about-graphics-clothing {
@@ -234,7 +199,7 @@
     font-family: Hiragino Kaku Gothic ProN;
     font-style: normal;
     font-weight: normal;
-    font-size: 19px;
+font-size: clamp(10px, 1vw, 35px);
     color: rgba(255,255,255,1);
 }
 #about-graphics-i {
@@ -249,7 +214,7 @@
     font-family: Heisei Mincho Std;
     font-style: normal;
     font-weight: normal;
-    font-size: 55px;
+font-size: clamp(10px, 5vw, 70px);
     color: rgba(255,255,255,1);
 }
 #about-graphics-shelter {
@@ -264,7 +229,7 @@
     font-family: Hiragino Kaku Gothic ProN;
     font-style: normal;
     font-weight: normal;
-    font-size: 19px;
+font-size: clamp(10px, 1vw, 35px);
     color: rgba(255,255,255,1);
 }
 #about-graphics-ju {
@@ -279,7 +244,7 @@
     font-family: Heisei Mincho Std;
     font-style: normal;
     font-weight: normal;
-    font-size: 55px;
+font-size: clamp(10px, 5vw, 70px);
     color: rgba(255,255,255,1);
 }
 #about-graphics-food {
@@ -294,7 +259,7 @@
     font-family: Hiragino Kaku Gothic ProN;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+font-size: clamp(10px, 1vw, 35px);
     color: rgba(255,255,255,1);
 }
 #about-graphics-shoku {
@@ -309,11 +274,11 @@
     font-family: Heisei Mincho Std;
     font-style: normal;
     font-weight: normal;
-    font-size: 55px;
+font-size: clamp(10px, 5vw, 70px);
     color: rgba(255,255,255,1);
 }
 .about-graphics-x {
-    font-size: 60px;
+font-size: clamp(10px, 5vw, 70px);
     color: white;
 }
 #top-logo {
@@ -343,7 +308,7 @@
     font-family: Hiragino Kaku Gothic ProN;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+        font-size: clamp(3px, 1.5vw, 50px);
     color: rgba(255,255,255,1);
     z-index: 1;
 }
@@ -582,10 +547,8 @@ position: absolute;
 }
 .aaq {
     overflow: visible;
-    /* position: absolute; */
     width: 35px;
     height: 35px;
-    /* transform: translate(-1735.5px, -76.5px) matrix(1,0,0,1,1735.5,76.5) rotate(90deg); */
     transform-origin: center;
     left: 0px;
     top: 0px;
@@ -664,15 +627,7 @@ position: absolute;
     top: 0px; */
     transform: matrix(1,0,0,1,0,0);
 }
-/* #aaw {
-    fill: transparent;
-    stroke: rgba(255,255,255,1);
-    stroke-width: 2px;
-    stroke-linejoin: miter;
-    stroke-linecap: butt;
-    stroke-miterlimit: 4;
-    shape-rendering: auto;
-} */
+
 .nav-menu-line {
     overflow: visible;
     position: absolute;
@@ -685,14 +640,7 @@ position: absolute;
 #nav-menu-line {
     fill: transparent;
 }
-/* .aax {
-    position: absolute;
-    overflow: visible;
-    width: 117px;
-    height: 71px;
-    left: 0px;
-    top: 0px;
-} */
+
 .about-images {
     width: -webkit-fill-available;
     display: flex;
@@ -965,7 +913,6 @@ position: absolute;
 }
 .footer-first {
     overflow: visible;
-    /* position: absolute; */
     width: 10.885px;
     height: 73.135px;
     left: 329px;
@@ -977,7 +924,6 @@ position: absolute;
 }
 .footer-c {
     overflow: visible;
-    /* position: absolute; */
     width: 10.884px;
     height: 73.135px;
     left: 694.427px;
@@ -989,7 +935,6 @@ position: absolute;
 }
 .footer-o {
     overflow: visible;
-    /* position: absolute; */
     width: 41.194px;
     height: 48.174px;
     left: 363.727px;
@@ -1001,7 +946,6 @@ position: absolute;
 }
 .footer-r {
     overflow: visible;
-    /* position: absolute; */
     width: 48.175px;
     height: 48.175px;
     left: 414.94px;
@@ -1013,7 +957,6 @@ position: absolute;
 }
 .footer-v {
     overflow: visible;
-    /* position: absolute; */
     width: 43.558px;
     height: 45.824px;
     left: 523.743px;
@@ -1025,7 +968,6 @@ position: absolute;
 }
 .footer-u {
     overflow: visible;
-    /* position: absolute; */
     width: 36.892px;
     height: 46.99px;
     left: 581.062px;
@@ -1037,7 +979,6 @@ position: absolute;
 }
 .footer-s {
     overflow: visible;
-    /* position: absolute; */
     width: 33.852px;
     height: 48.175px;
     left: 633.49px;
@@ -1049,47 +990,28 @@ position: absolute;
 }
 .footer-end {
     overflow: visible;
-    /* position: absolute; */
     width: 33.568px;
     height: 45.824px;
     left: 477.72px;
     top: 7345.66px;
     transform: matrix(1,0,0,1,0,0);
 }
-/* #abv {
-    position: absolute;
-    width: 100%;
-    height: 828px;
-    left: 0px;
-    top: 4985px;
-    overflow: visible;
-    --web-animation: fadein 0.30000001192092896s ease-out;
-    --web-action-type: page;
-    --web-action-target: .html;
-    cursor: pointer;
-} */
 #genre-i-img {
-    /* position: absolute; */
     width: 34%;
-    /* /* height: 828px; */
     left: 0px;
     top: 0px;
     overflow: visible;
     z-index: 1;
 }
 #genre-shoku-img {
-    /* position: absolute; */
     width: 34%;
-    /* /* height: 828px; */
     left: 34%;
     top: 0px;
     overflow: visible;
     z-index: 1;
 }
 #genre-ju-img {
-    /* position: absolute; */
     width: 34%;
-    /* /* height: 828px; */
     right: 0px;
     top: 0px;
     overflow: visible;
@@ -1103,13 +1025,12 @@ position: absolute;
     align-content: center;
     height: 118px;
     left: 0;
-    top: 355px;
+    /* top: 355px; */
     overflow: visible;
     z-index: 1;
 }
 #genre-i-en {
     border: 0;
-    /* left: 94px; */
     top: 56px;
     position: relative;
     overflow: visible;
@@ -1120,14 +1041,12 @@ position: absolute;
     font-family: Hiragino Kaku Gothic ProN;
     font-style: normal;
     font-weight: normal;
-    font-size: 19px;
+    font-size: clamp(10px, 5vw, 15px);
     color: rgba(255, 255, 255, 1);
     z-index: 1;
 }
 #genre-i-jp {
     border: 0;
-    /* left: 94px; */
-    /* top: 97px; */
     position: absolute;
     overflow: visible;
     width: 100%;
@@ -1137,7 +1056,7 @@ position: absolute;
     font-family: Heisei Mincho Std;
     font-style: normal;
     font-weight: normal;
-    font-size: 75px;
+    font-size: clamp(10px, 6vw, 70px);
     color: rgba(255,255,255,1);
     z-index: 1;
 }
@@ -1149,14 +1068,12 @@ position: absolute;
     align-items: center;
     align-content: center;
     height: 118px;
-    /* left: 189px; */
-    top: 355px;
+    /* top: 355px; */
     overflow: visible;
     z-index: 1;
 }
 #genre-shoku-en {
     border: 0;
-    /* left: 94px; */
     top: 56px;
     position: relative;
     overflow: visible;
@@ -1167,14 +1084,12 @@ position: absolute;
     font-family: Hiragino Kaku Gothic ProN;
     font-style: normal;
     font-weight: normal;
-    font-size: 19px;
+    font-size: clamp(10px, 5vw, 15px);
     color: rgba(255, 255, 255, 1);
     z-index: 1;
 }
 #genre-shoku-jp {
     border: 0;
-    /* left: 94px; */
-    /* top: 97px; */
     position: absolute;
     overflow: visible;
     width: 100%;
@@ -1184,7 +1099,7 @@ position: absolute;
     font-family: Heisei Mincho Std;
     font-style: normal;
     font-weight: normal;
-    font-size: 75px;
+    font-size: clamp(10px, 6vw, 70px);
     color: rgba(255,255,255,1);
     z-index: 1;
 }
@@ -1196,13 +1111,12 @@ position: absolute;
     align-content: center;
     height: 118px;
     right: 0px;
-    top: 355px;
+    /* top: 355px; */
     overflow: visible;
     z-index: 1;
 }
 #genre-ju-en {
     border: 0;
-    /* left: 94px; */
     top: 56px;
     position: relative;
     overflow: visible;
@@ -1213,7 +1127,7 @@ position: absolute;
     font-family: Hiragino Kaku Gothic ProN;
     font-style: normal;
     font-weight: normal;
-    font-size: 19px;
+    font-size: clamp(10px, 5vw, 15px);
     color: rgba(255, 255, 255, 1);
     z-index: 1;
 }
@@ -1230,7 +1144,7 @@ position: absolute;
     font-family: Heisei Mincho Std;
     font-style: normal;
     font-weight: normal;
-    font-size: 75px;
+    font-size: clamp(10px, 6vw, 70px);
     color: rgba(255,255,255,1);
     z-index: 1;
 }
@@ -1247,7 +1161,7 @@ position: absolute;
     font-family: Hiragino Kaku Gothic ProN;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
+    font-size: clamp(10px, 1vw, 70px);
     color: rgba(255,255,255,1);
     margin: 100px;
     z-index: 1;
@@ -1269,7 +1183,7 @@ position: absolute;
     font-family: Heisei Mincho Std;
     font-style: normal;
     font-weight: normal;
-    font-size: 70px;
+    font-size: clamp(10px, 6vw, 70px);
     color: rgba(255,255,255,1);
     z-index: 1;
 }
