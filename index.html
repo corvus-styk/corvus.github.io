@@ -47,6 +47,7 @@
 				<div class="menu-list-col">
 					<div id="aai" onclick="goTo('contact/contact.html')" style="cursor: pointer;"><span>> CONTACT</span></div>
 					<div id="aaj" onclick="window.open('https://www.instagram.com/shuichi.osawa/', '_blank')" style="cursor: pointer;"><span>> INSTAGRAM</span></div>
+					<i id="menu-insta-favicon" class="fab fa-instagram"></i>
 				</div>
 			</div>
 
@@ -74,7 +75,7 @@
 		<div class="top">
 			 <div class="top-bg-filter"></div>
 			<div id="top-logo">
-				<img id="img/logo" src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x">
+				<img id="top-logo-img" src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x">
 			</div>
 			<div id="top-text">
 				<span>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト<br/>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</span>
@@ -101,12 +102,16 @@
 					</div>
 
 					<div class="about-graphics-items-row">
-						<div class="about-graphics-x">
+						<!-- <div class="about-graphics-x">
 							x
-						</div>
+						</div> -->
+						<svg class="x-icon" viewBox="0 0 24 24">
+							<path d="M 0 0 L 24 24 M 24 0 L 0 24" stroke="white" stroke-width="2" />
+						</svg>
+
 					</div>
 
-					<div class="about-graphics-items-row">
+					<div class="about-graphics-items-row2">
 						<div class="about-graphics-item">
 							<div id="about-graphics-ju">
 								<span>（ 住 ）</span>
@@ -115,6 +120,10 @@
 								<span>Shelter</span>
 							</div>
 						</div>
+						<svg class="x-icon2" viewBox="0 0 24 24">
+							<path d="M 0 0 L 24 24 M 24 0 L 0 24" stroke="white" stroke-width="2" />
+						</svg>
+
 						<div class="about-graphics-item">
 							<div id="about-graphics-shoku">
 								<span>（ 食 ）</span>
@@ -125,12 +134,12 @@
 						</div>
 					</div>
 
-									<div class="about-graphics-text" id="about-graphics-text">
-					<span>CORVUSの理念を説明する場所。CORVUSが社会に対して、未来に対して、どんな価値を生み出したいのかという“思想”を言葉にする場所です。CORVUSの理念を説明する場所。CORVUSが社会に対して、未来に対して、どんな価値を生み出したいのかという“思想”を言葉にする場所です。</span>
-				</div>
-				<div  id="about-graphics-link">
-					<span onclick="goTo('philosophy/philosophy.html')" style="cursor: pointer;">> PHILOSOPHY</span>
-				</div>
+					<div class="about-graphics-text" id="about-graphics-text">
+						<span>CORVUSの理念を説明する場所。CORVUSが社会に対して、未来に対して、どんな価値を生み出したいのかという“思想”を言葉にする場所です。CORVUSの理念を説明する場所。CORVUSが社会に対して、未来に対して、どんな価値を生み出したいのかという“思想”を言葉にする場所です。</span>
+					</div>
+					<div  id="about-graphics-link">
+						<span onclick="goTo('philosophy/philosophy.html')" style="cursor: pointer;">> PHILOSOPHY</span>
+					</div>
 				</div>
 
 
@@ -146,39 +155,40 @@
 
 		<div class="genres"  id="abv">
 			<div class="bg-filter"></div>
-		<img id="genre-i-img" src="img/genre-i.png" srcset="img/genre-i.png 1x, img/genre-i@2x.png 2x">
+			<div class="genre-images">
+				<img id="genre-i-img" src="img/genre-i.png" srcset="img/genre-i.png 1x, img/genre-i@2x.png 2x">
+					
+				<img id="genre-shoku-img" src="img/genre-shoku.png" srcset="img/genre-shoku.png 1x, img/genre-shoku@2x.png 2x">
+					
+				<img id="genre-ju-img" src="img/genre-ju.png" srcset="img/genre-ju.png 1x, img/genre-ju@2x.png 2x">
+			</div>
 			
-		</svg>
-		<img id="genre-shoku-img" src="img/genre-shoku.png" srcset="img/genre-shoku.png 1x, img/genre-shoku@2x.png 2x">
-			
-		</svg>
-		<img id="genre-ju-img" src="img/genre-ju.png" srcset="img/genre-ju.png 1x, img/genre-ju@2x.png 2x">
-			
-		</svg>
-		<div id="genre-i" onclick="goTo('contents/contents.html')" style="cursor: pointer;">
-			<div id="genre-i-en">
-				<span>Clothing</span>
+			<div class="genre-texts">
+				<div id="genre-i" onclick="goTo('contents/contents.html')" style="cursor: pointer;">
+					<div id="genre-i-en">
+						<span>Clothing</span>
+					</div>
+					<div id="genre-i-jp">
+						<span>（ 衣 ）</span>
+					</div>
+				</div>
+				<div id="genre-shoku" onclick="goTo('contents/contents.html')" style="cursor: pointer;">
+					<div id="genre-shoku-en">
+						<span>Food</span>
+					</div>
+					<div id="genre-shoku-jp">
+						<span>（ 食 ）</span>
+					</div>
+				</div>
+				<div id="genre-ju" onclick="goTo('contents/contents.html')" style="cursor: pointer;">
+					<div id="genre-ju-en">
+						<span>Shelter</span>
+					</div>
+					<div id="genre-ju-jp">
+						<span>（ 住 ）</span>
+					</div>
+				</div>
 			</div>
-			<div id="genre-i-jp">
-				<span>（ 衣 ）</span>
-			</div>
-		</div>
-		<div id="genre-shoku" onclick="goTo('contents/contents.html')" style="cursor: pointer;">
-			<div id="genre-shoku-en">
-				<span>Food</span>
-			</div>
-			<div id="genre-shoku-jp">
-				<span>（ 食 ）</span>
-			</div>
-		</div>
-		<div id="genre-ju" onclick="goTo('contents/contents.html')" style="cursor: pointer;">
-			<div id="genre-ju-en">
-				<span>Shelter</span>
-			</div>
-			<div id="genre-ju-jp">
-				<span>（ 住 ）</span>
-			</div>
-		</div>
 		</div>
 
 		<div class="mission">
@@ -188,7 +198,9 @@
 			</div>
 			<div id="mission-text">
 				<span>CORVUSという名前に込めた想いや、「なぜこのブランドを始めたのか」という動機を伝える場所です。<br/>原点やブランド立ち上げに至るまでの“文脈”や“想い”を語る文章を想定しています。<br/>CORVUSが届けたいのは「単なる“モノ”ではなく、暮らしや生き方への提案であること」のような文章エリア。</span>
+			<div id="mission-link" onclick="goTo('about/about.html')" style="cursor: pointer;"><span>> ABOUT</span></div>	
 			</div>
+				
 			<img id="studio" src="img/studio.png" srcset="img/studio.png 1x, img/studio@2x.png 2x">
 		</div>
 
@@ -230,6 +242,8 @@
 						<div id="footer-insta">
 							<span onclick="window.open('https://www.instagram.com/shuichi.osawa/', '_blank')" style="cursor: pointer;">INSTAGRAM</span>
 						</div>
+						<i id="footer-insta-favicon" class="fab fa-instagram"></i>
+
 					</div>
 				</div>
 			</div>

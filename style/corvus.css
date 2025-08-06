@@ -67,12 +67,26 @@
     align-content: center;
     align-items: center;
 }
+.genre-images {
+    display: flex;
+}
+.genre-texts {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 .about-graphics {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: -webkit-fill-available;
+    z-index: 1;
 }
 
 #top {
@@ -115,7 +129,7 @@
         margin-top: 5%;
 }
 
-.about-graphics-items-row {
+.about-graphics-items-row, .about-graphics-items-row2 {
     /* position: absolute; */
     display: flex;
     top: 5rem;
@@ -184,7 +198,7 @@
     font-family: Hiragino Kaku Gothic ProN;
     font-style: normal;
     font-weight: normal;
-font-size: clamp(10px, 2vw, 30px);
+font-size: clamp(9px, 2vw, 30px);
     color: rgba(255,255,255,1);
 }
 #about-graphics-clothing {
@@ -277,17 +291,22 @@ font-size: clamp(10px, 1vw, 35px);
 font-size: clamp(10px, 5vw, 70px);
     color: rgba(255,255,255,1);
 }
-.about-graphics-x {
-font-size: clamp(10px, 5vw, 70px);
+.x-icon,   .x-icon2 {
     color: white;
+    width: clamp(10px, 6vw, 20px);
+    margin: 10% 0 2% 0;
+}
+.x-icon2 {
+    display: none;
 }
 #top-logo {
     position: relative;
-    width: 362.994px;
-    height: 70.547px;
-    /* left: 778.784px; */
-    /* top: 450px; */
+    width: 60%;
+    max-width: 376px;
     overflow: visible;
+}
+#top-logo-img {
+    width: 100%;
 }
 #logo {
     position: absolute;
@@ -298,32 +317,36 @@ font-size: clamp(10px, 5vw, 70px);
     overflow: visible;
 }
 #top-text {
-    border: 0;
     overflow: visible;
-    width: 594px;
-    height: 70px;
-    line-height: 28px;
+    width: 70%;
+    /* height: 70px; */
+    line-height: 2;
     margin-top: 50px;
     text-align: center;
     font-family: Hiragino Kaku Gothic ProN;
     font-style: normal;
     font-weight: normal;
-        font-size: clamp(3px, 1.5vw, 50px);
-    color: rgba(255,255,255,1);
+    font-size: clamp(7px, 1.5vw, 50px);
+    color: rgba(255, 255, 255, 1);
     z-index: 1;
 }
 #nav-logo {
-position: absolute;
-    width: 196.315px;
-    height: 38.153px;
+    width: 30%;
+    max-width: 197px;
+    height: 100%;
+    position: absolute;
+    /* width: 196.315px; */
+    display: flex;
+    /* height: 38.153px; */
     left: 5%;
     /* top: 86px; */
     overflow: visible;
+        top: 30%;
 }
 #logo-mini {
     position: absolute;
-    width: 196.315px;
-    height: 38.153px;
+    width: 100%;
+    /* width: clamp(10px, 50%, 15px);; */
     left: 0px;
     top: 0px;
     overflow: visible;
@@ -418,17 +441,35 @@ position: absolute;
     top: 665px;
     /* position: absolute; */
     overflow: visible;
-    width: 294px;
+    /* width: 100%; */
     white-space: nowrap;
     --web-animation: fadein undefineds undefined;
     --web-action-type: page;
     --web-action-target: Philosiphy.html;
     cursor: pointer;
-    text-align: left;
     font-family: Hiragino Kaku Gothic ProN;
     font-style: normal;
     font-weight: normal;
     font-size: 35px;
+    color: rgba(255,255,255,1);
+}
+#mission-link {
+    border: 0;
+    left: 424px;
+    top: 665px;
+    /* position: absolute; */
+    overflow: visible;
+    width: 100%;
+    white-space: nowrap;
+    --web-animation: fadein undefineds undefined;
+    --web-action-type: page;
+    --web-action-target: Philosiphy.html;
+    cursor: pointer;
+    font-family: Hiragino Kaku Gothic ProN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: clamp(8px, 2vw, 70px);
+    padding: 10px 0px;
     color: rgba(255,255,255,1);
 }
 #aai {
@@ -584,9 +625,11 @@ position: absolute;
 }
 
 .menu-icon {
-  display: inline-block;
-  width: 40px;
-  height: 20px;
+    display: inline-block;
+    width: 35px;
+    height: 16px;
+    right: 20px;
+    position: absolute;
 }
 #nav-menu {
     position: absolute;
@@ -642,39 +685,42 @@ position: absolute;
 }
 
 .about-images {
-    width: -webkit-fill-available;
     display: flex;
     height: auto;
-    position: relative;  /* 子の absolute の基準になる */
-  width: 100%;         /* 必要に応じて調整 */
+    position: relative;
+    width: 100%;
+    flex-direction: column;
 }
 
 #about-ju, #about-i, #about-shoku, #about-all {
-    position: absolute;
     height: auto;
 }
 
 #about-ju { 
-    top: -60px;
-    left: 0px;
-    width: 30%;
-    z-index: 5000;
+    width: 35%;
+    /* z-index: 5000; */
+    margin-top: -90px;
+    z-index: 1;
 }
 #about-shoku { 
-    top: 100px;
     right: 0px;
     width: 40%;
+    margin-top: -215px;
+    margin-left: 60%;
  }
 #about-i {
-    top: 1000px;
-    width: 30%;
-    left: 20%;
+    /* top: 1000px; */
+    width: 35%;
+    /* top: 100px; */
+    margin-top: -150px;
+    margin-left: 25%;
 }
 #about-all { 
-    top: 1700px;
-    width: 50%;
-    right: 0px;
+    margin-top: 10px;
+    width: clamp(700px, 50vw, 1200px);
+    margin-left: clamp(100px, 50vw, 277px);
 }
+
 .footer {
     background-image: none;
     background-color: rgb(28, 12, 12);
@@ -728,27 +774,6 @@ position: absolute;
     width: 33%;
 }
 
-#footer-about {
-    border: 0;
-    left: 622px;
-    top: 6288px;
-    position: absolute;
-    overflow: visible;
-    width: 678px;
-    height: 27px;
-    --web-animation: fadein 0.30000001192092896s ease-out;
-    --web-action-type: page;
-    --web-action-target: About.html;
-    cursor: pointer;
-    line-height: 32px;
-    margin-top: -8.5px;
-    text-align: center;
-    font-family: Hiragino Kaku Gothic ProN;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    color: rgba(255,255,255,1);
-}
 #footer-top {
     border: 0;
     left: 1199px;
@@ -1152,18 +1177,17 @@ position: absolute;
     border: 0;
     left: 492px;
     top: 6169px;
-    /* position: absolute; */
     overflow: visible;
-    width: 938px;
-    height: 75px;
-    line-height: 30px;
+    width: 80%;
+    line-height: 1;
+    line-height: 2;
     text-align: center;
     font-family: Hiragino Kaku Gothic ProN;
     font-style: normal;
     font-weight: normal;
-    font-size: clamp(10px, 1vw, 70px);
-    color: rgba(255,255,255,1);
-    margin: 100px;
+    font-size: clamp(8px, 2vw, 70px);
+    color: rgba(255, 255, 255, 1);
+    margin: 20px;
     z-index: 1;
 }
 #studio {
@@ -1183,7 +1207,182 @@ position: absolute;
     font-family: Heisei Mincho Std;
     font-style: normal;
     font-weight: normal;
-    font-size: clamp(10px, 6vw, 70px);
+    font-size: clamp(36px, 9vw, 70px);
     color: rgba(255,255,255,1);
     z-index: 1;
+}
+#menu-insta-favicon, #footer-insta-favicon {
+    display: none;
+}
+
+
+@media (max-width: 797px) {
+  .about-circle {
+    display: none;
+  }
+  .x-icon2 {
+    display: flex;
+  }
+  .about-graphics-items-row2 {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+  }
+    .x-icon, .x-icon2 {
+        color: white;
+        width: clamp(10px, 6vw, 15px);
+        margin: 10% 0 8% 0;
+    }
+    #about-graphics-text {
+        width: 150%;
+    }
+    .genres {
+        display: flow;
+    }
+    .genre-images, .genre-texts {
+        align-content: center;
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+        }
+    .genre-texts {
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        display: flex;
+            position: absolute;
+    top: 0px;
+            width: -webkit-fill-available;
+    }
+    #genre-i-img, #genre-shoku-img, #genre-ju-img {
+        width: 100%;
+        height: 180px;
+        left: 0px;
+        object-fit: cover;
+        z-index: 1;
+        overflow: hidden;
+    }
+    #genre-i-img, #genre-ju-img {
+        object-position: center 85%;
+    }
+    #genre-i, #genre-shoku, #genre-ju {
+    position: relative;
+        left: 4%;
+        height: 180px;
+        top: 5rem;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+    .mission {
+        padding-top: 0px;
+    }
+    #studio {
+        width: 100%;
+    }
+    .footer-top {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-logo {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: none;
+        width: 100%;
+        display: contents;
+        align-items: center;
+    }
+    .footer-other {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: space-between;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        line-height: 35.5px;
+    }
+    .footer-other-c1, .footer-other-c2, .footer-other-c3 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    #footer-logo {
+        padding-bottom: 18px;
+
+    }
+    #footer-top, #footer-about, #footer-phil, #footer-genre-i,#footer-genre-shoku, #footer-genre-ju, #footer-contact, #footer-insta  {
+        font-size: 11px;
+        width: 34%;
+        text-align: center;
+    }
+    #aaj, #footer-insta  {
+        display: none; 
+    }
+    #menu-insta-favicon, #footer-insta-favicon {
+        display: flex;
+        font-weight: 800;
+        color: white;
+        padding: 10px;
+    }
+    #footer-top, #footer-about, #footer-phil {
+        width: 34%;
+    }
+    #footer-genre {
+        display: flex;
+        /* position: absolute; */
+        width: 100%;
+        justify-content: space-between;
+        height: auto;
+    }
+    .footer-other-c3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+    .about-graphics-items {
+        margin: 81px 10px;
+        position: relative;
+    }
+    #about-ju {
+        width: 50%;
+        z-index: 1;
+        margin-top: 0;
+    }
+    #about-shoku {
+        right: 0px;
+        width: 40%;
+        margin-top: -115px;
+        margin-left: 60%;
+    }
+    #about-i {
+        width: 35%;
+        margin-top: -50px;
+        margin-left: 15%;
+    }
+    #about-all {
+        margin-top: 40px;
+        width: clamp(300px, 50vw, 1200px);
+        margin-left: clamp(100px, 20vw, 277px);
+    }
+    .menu-list {
+        flex-direction: column;
+        padding-left: 10px;
+    }
+    #aaf, #aag, #aah, #aal, #aam, #aan, #aai, #aaj {
+        font-size: 15px;
+        line-height: 3;
+    }
 }
