@@ -335,13 +335,10 @@ font-size: clamp(10px, 5vw, 70px);
     max-width: 197px;
     height: 100%;
     position: absolute;
-    /* width: 196.315px; */
     display: flex;
-    /* height: 38.153px; */
     left: 5%;
-    /* top: 86px; */
     overflow: visible;
-        top: 30%;
+    top: 30%;
 }
 #logo-mini {
     position: absolute;
@@ -374,34 +371,29 @@ font-size: clamp(10px, 5vw, 70px);
 		fill: rgba(39,22,11,1);
 	}
 .aac {
-    /* position: absolute; */
     overflow: visible;
     width: 1920px;
     height: 1077px;
     left: 0px;
     top: 0px;
 }
-#aad {
-    /* position: absolute; */
-    width: 196.315px;
-    height: 38.153px;
+#menu-logo {
     left: 97px;
     top: 86px;
     overflow: visible;
 }
-#aae {
-    /* position: absolute; */
-    width: 196.315px;
-    height: 38.153px;
-    left: 0px;
-    top: 0px;
+#menu-logo-img {
+    width: 30%;
+    max-width: 197px;
+    position: absolute;
+    display: flex;
+    left: 5%;
     overflow: visible;
 }
-#aaf {
+#menu-top {
     border: 0;
     left: 424px;
     top: 372px;
-    /* position: absolute; */
     overflow: visible;
     width: 119px;
     white-space: nowrap;
@@ -416,7 +408,7 @@ font-size: clamp(10px, 5vw, 70px);
     font-size: 40px;
     color: rgba(255,255,255,1);
 }
-#aag {
+#menu-about {
     border: 0;
     left: 424px;
     top: 519px;
@@ -435,7 +427,7 @@ font-size: clamp(10px, 5vw, 70px);
     font-size: 35px;
     color: rgba(255,255,255,1);
 }
-#aah {
+#menu-phil {
     border: 0;
     left: 424px;
     top: 665px;
@@ -472,7 +464,7 @@ font-size: clamp(10px, 5vw, 70px);
     padding: 10px 0px;
     color: rgba(255,255,255,1);
 }
-#aai {
+#menu-contact {
     border: 0;
     left: 1224px;
     top: 372px;
@@ -491,7 +483,7 @@ font-size: clamp(10px, 5vw, 70px);
     font-size: 35px;
     color: rgba(255,255,255,1);
 }
-#aaj {
+#menu-insta {
     border: 0;
     left: 1224px;
     top: 519px;
@@ -506,7 +498,7 @@ font-size: clamp(10px, 5vw, 70px);
     font-size: 35px;
     color: rgba(255,255,255,1);
 }
-#aal {
+#menu-i {
     border: 0;
     left: 0px;
     top: 0px;
@@ -521,7 +513,7 @@ font-size: clamp(10px, 5vw, 70px);
     font-size: 40px;
     color: rgba(255,255,255,1);
 }
-#aam {
+#menu-shoku {
     border: 0;
     left: 0px;
     top: 147px;
@@ -536,7 +528,7 @@ font-size: clamp(10px, 5vw, 70px);
     font-size: 40px;
     color: rgba(255,255,255,1);
 }
-#aan {
+#menu-ju {
     border: 0;
     left: 0px;
     top: 293px;
@@ -551,7 +543,7 @@ font-size: clamp(10px, 5vw, 70px);
     font-size: 40px;
     color: rgba(255,255,255,1);
 }
-#aao {
+#close-icon {
     /* position: absolute; */
     width: 35px;
     height: 35px;
@@ -559,7 +551,7 @@ font-size: clamp(10px, 5vw, 70px);
     top: 75.5px;
     overflow: visible;
 }
-#aap {
+#close-icon-path {
     fill: transparent;
     stroke: rgba(255,255,255,1);
     stroke-width: 2px;
@@ -568,7 +560,7 @@ font-size: clamp(10px, 5vw, 70px);
     stroke-miterlimit: 4;
     shape-rendering: auto;
 }
-.aap {
+.close-icon-svg {
     overflow: visible;
     /* position: absolute; */
     width: 40.414px;
@@ -576,23 +568,6 @@ font-size: clamp(10px, 5vw, 70px);
     left: 0px;
     top: 0px;
     transform: matrix(1,0,0,1,0,0);
-}
-#aaq {
-    fill: transparent;
-    stroke: rgba(255,255,255,1);
-    stroke-width: 2px;
-    stroke-linejoin: miter;
-    stroke-linecap: butt;
-    stroke-miterlimit: 4;
-    shape-rendering: auto;
-}
-.aaq {
-    overflow: visible;
-    width: 35px;
-    height: 35px;
-    transform-origin: center;
-    left: 0px;
-    top: 0px;
 }
 .menu-list {
     margin-top: 5rem;
@@ -1326,7 +1301,7 @@ font-size: clamp(10px, 5vw, 70px);
         width: 34%;
         text-align: center;
     }
-    #aaj, #footer-insta  {
+    #menu-insta, #footer-insta  {
         display: none; 
     }
     #menu-insta-favicon, #footer-insta-favicon {
@@ -1381,7 +1356,7 @@ font-size: clamp(10px, 5vw, 70px);
         flex-direction: column;
         padding-left: 10px;
     }
-    #aaf, #aag, #aah, #aal, #aam, #aan, #aai, #aaj {
+    #menu-top, #menu-about, #menu-phil, #menu-i, #menu-shoku, #menu-ju, #menu-contact, #menu-insta {
         font-size: 15px;
         line-height: 3;
     }

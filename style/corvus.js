@@ -28,7 +28,7 @@ function goTo(url) {
 
   document.addEventListener('DOMContentLoaded', () => {
 const menu = document.getElementById('menu');
-const closeBtn = document.getElementById('aao');
+const closeBtn = document.getElementById('close-icon');
 const navMenu = document.getElementById('nav-menu');
 
 // 開く

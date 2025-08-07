@@ -16,9 +16,6 @@
 <title>(CORVUS)</title>
 <link rel="stylesheet" href="style/corvus.css">
 <script src="style/corvus.js"></script>
-
-
-
 </head>
 
 
@@ -29,35 +26,35 @@
 		</div>
 		<!-- Overlay Menu -->
 		<div id="menu">
-			<div id="aad" style="text-align:center; margin-top:2rem;">
-				<img id="aae" src="img/aae.png" srcset="img/aae.png 1x, img/aae@2x.png 2x" style="width:200px;">
+			<div id="menu-logo" style="text-align:center; margin-top:2rem;">
+				<img id="menu-logo-img" src="img/menu-logo-img.png" srcset="img/menu-logo-img.png 1x, img/menu-logo-img@2x.png 2x">
 			</div>
 
 			<div class="menu-list">
 				<div class="menu-list-col">
-					<div id="aaf"　div onclick="goTo('index.html')" style="cursor: pointer;"><span>> TOP</span></div>
-					<div id="aag" div onclick="goTo('about/about.html')" style="cursor: pointer;"><span>> ABOUT</span></div>
-					<div id="aah" onclick="goTo('philosophy/philosophy.html')" style="cursor: pointer;"><span>> PHILOSOPHY</span></div>					
+					<div id="menu-top" onclick="goTo('index.html')" style="cursor: pointer;"><span>> TOP</span></div>
+					<div id="menu-about" onclick="goTo('about/about.html')" style="cursor: pointer;"><span>> ABOUT</span></div>
+					<div id="menu-phil" onclick="goTo('philosophy/philosophy.html')" style="cursor: pointer;"><span>> PHILOSOPHY</span></div>					
 				</div>
 				<div class="menu-list-col">
-					<div id="aal" onclick="goTo('contents/contents.html')" style="cursor: pointer;"><span>> 衣</span></div>
-					<div id="aam" onclick="goTo('contents/contents.html')" style="cursor: pointer;"><span>> 食</span></div>
-					<div id="aan" onclick="goTo('contents/contents.html')" style="cursor: pointer;"><span>> 住</span></div>
+					<div id="menu-i" onclick="goTo('contents/contents.html')" style="cursor: pointer;"><span>> 衣</span></div>
+					<div id="menu-shoku" onclick="goTo('contents/contents.html')" style="cursor: pointer;"><span>> 食</span></div>
+					<div id="menu-ju" onclick="goTo('contents/contents.html')" style="cursor: pointer;"><span>> 住</span></div>
 				</div>
 				<div class="menu-list-col">
-					<div id="aai" onclick="goTo('contact/contact.html')" style="cursor: pointer;"><span>> CONTACT</span></div>
-					<div id="aaj" onclick="window.open('https://www.instagram.com/shuichi.osawa/', '_blank')" style="cursor: pointer;"><span>> INSTAGRAM</span></div>
+					<div id="menu-contact" onclick="goTo('contact/contact.html')" style="cursor: pointer;"><span>> CONTACT</span></div>
+					<div id="menu-insta" onclick="window.open('https://www.instagram.com/shuichi.osawa/', '_blank')" style="cursor: pointer;"><span>> INSTAGRAM</span></div>
 					<i id="menu-insta-favicon" class="fab fa-instagram"></i>
 				</div>
 			</div>
 
 			<!-- Close Button -->
-			<div id="aao" style="position:absolute; top:1rem; right:1rem; cursor:pointer;">
-				<svg class="aap" viewBox="0 0 39 39" style="width:30px; height:30px;">
-				<path id="aap" d="M 0 0 L 39 39" stroke="white" stroke-width="2"/>
+			<div id="close-icon" style="position:absolute; top:1rem; right:1rem; cursor:pointer;">
+				<svg class="close-icon-svg" viewBox="0 0 39 39" style="width:30px; height:30px;">
+				<path id="close-icon-path" d="M 0 0 L 39 39" stroke="white" stroke-width="2"/>
 				</svg>
-				<svg class="aaq" viewBox="0 0 39 39" style="width:30px; height:30px; position:absolute; top:0; left:0;">
-				<path id="aaq" d="M 0 39 L 39 0" stroke="white" stroke-width="2"/>
+				<svg class="close-icon-svg" viewBox="0 0 39 39" style="width:30px; height:30px; position:absolute; top:0; left:0;">
+				<path id="close-icon-path" d="M 0 39 L 39 0" stroke="white" stroke-width="2"/>
 				</svg>
 			</div>
 		</div>
