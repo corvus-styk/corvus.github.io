@@ -25,7 +25,6 @@
     z-index: 1000;
     background-color: transparent;
     padding: 1rem 2rem;
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); */
 }
 
 .top, .about, .genres, .mission, .footer {
@@ -41,7 +40,6 @@
     padding: 5rem 0rem 5rem 0rem;
 }
 .top {
-    /* filter: brightness(0.7); */
     height: 100vh;
     background-image: url('../img/bg.png');
     background-size: auto;     /* 画面全体にフィットさせる */
@@ -66,22 +64,32 @@
     display: flex;
     width: -webkit-fill-available;
     flex-direction: row;
-    /* padding: 2rem; */
     align-content: center;
     align-items: center;
 }
+.genre-images {
+    display: flex;
+}
+.genre-texts {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 .about-graphics {
-    /* position: relative; */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: 100vh; */
     flex-direction: column;
     width: -webkit-fill-available;
+    z-index: 1;
 }
 
 #top {
-    /* background-image: url('../img/bg.png'); */
     background-size: auto;     /* 画面全体にフィットさせる */
     background-position: center;
     position: absolute;
@@ -107,36 +115,6 @@
     }
 
 }
-
-#blur-bg {
-    position: absolute;
-    width: 100%;
-    height: 1080px;
-    left: 0px;
-    top: 0px;
-    overflow: visible;
-}
-#bg {
-    position: absolute;
-    width: 100%;
-    height: 1080px;
-    left: 0px;
-    top: 0px;
-    overflow: visible;
-}
-#bg-frame {
-    opacity: 0.5;
-    fill: rgba(39,22,11,1);
-}
-.bg-frame {
-    mix-blend-mode: multiply;
-    position: absolute;
-    overflow: visible;
-    width: 100%;
-    height: 1080px;
-    left: 0px;
-    top: 0px;
-}
 .about-graphics-items {
     margin: 81px 10px;
     position: absolute;
@@ -148,9 +126,10 @@
     align-content: center;
     justify-content: center;
     align-items: center;
+        margin-top: 5%;
 }
 
-.about-graphics-items-row {
+.about-graphics-items-row, .about-graphics-items-row2 {
     /* position: absolute; */
     display: flex;
     top: 5rem;
@@ -180,7 +159,6 @@
     shape-rendering: auto;
 }
 .about-circle {
-    /* position: absolute; */
     overflow: visible;
     width: 50%;
     aspect-ratio: 1 / 1;
@@ -189,23 +167,24 @@
 }
 #about-graphics-text {
     position: relative;
+        padding-top: 15px;
     border: 0;
-    bottom: 280px;
+    /* bottom: 280px; */
     overflow: visible;
-    width: 581px;
-    height: 145px;
-    line-height: 32px;
+    width: 70%;
+    /* height: 145px; */
+    line-height: 2;
     text-align: center;
     font-family: Hiragino Kaku Gothic ProN;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
+    font-size: clamp(8px, 1vw, 15px);
     color: rgba(255,255,255,1);
 }
 #about-graphics-link {
     position: relative;
     border: 0;
-    bottom: 250px;
+    /* bottom: 250px; */
     overflow: visible;
     width: 678px;
     height: 27px;
@@ -219,7 +198,7 @@
     font-family: Hiragino Kaku Gothic ProN;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
+font-size: clamp(9px, 2vw, 30px);
     color: rgba(255,255,255,1);
 }
 #about-graphics-clothing {
@@ -234,7 +213,7 @@
     font-family: Hiragino Kaku Gothic ProN;
     font-style: normal;
     font-weight: normal;
-    font-size: 19px;
+font-size: clamp(10px, 1vw, 35px);
     color: rgba(255,255,255,1);
 }
 #about-graphics-i {
@@ -249,7 +228,7 @@
     font-family: Heisei Mincho Std;
     font-style: normal;
     font-weight: normal;
-    font-size: 55px;
+font-size: clamp(10px, 5vw, 70px);
     color: rgba(255,255,255,1);
 }
 #about-graphics-shelter {
@@ -264,7 +243,7 @@
     font-family: Hiragino Kaku Gothic ProN;
     font-style: normal;
     font-weight: normal;
-    font-size: 19px;
+font-size: clamp(10px, 1vw, 35px);
     color: rgba(255,255,255,1);
 }
 #about-graphics-ju {
@@ -279,7 +258,7 @@
     font-family: Heisei Mincho Std;
     font-style: normal;
     font-weight: normal;
-    font-size: 55px;
+font-size: clamp(10px, 5vw, 70px);
     color: rgba(255,255,255,1);
 }
 #about-graphics-food {
@@ -294,7 +273,7 @@
     font-family: Hiragino Kaku Gothic ProN;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+font-size: clamp(10px, 1vw, 35px);
     color: rgba(255,255,255,1);
 }
 #about-graphics-shoku {
@@ -309,20 +288,25 @@
     font-family: Heisei Mincho Std;
     font-style: normal;
     font-weight: normal;
-    font-size: 55px;
+font-size: clamp(10px, 5vw, 70px);
     color: rgba(255,255,255,1);
 }
-.about-graphics-x {
-    font-size: 60px;
+.x-icon,   .x-icon2 {
     color: white;
+    width: clamp(10px, 6vw, 20px);
+    margin: 10% 0 2% 0;
+}
+.x-icon2 {
+    display: none;
 }
 #top-logo {
     position: relative;
-    width: 362.994px;
-    height: 70.547px;
-    /* left: 778.784px; */
-    /* top: 450px; */
+    width: 60%;
+    max-width: 376px;
     overflow: visible;
+}
+#top-logo-img {
+    width: 100%;
 }
 #logo {
     position: absolute;
@@ -333,32 +317,36 @@
     overflow: visible;
 }
 #top-text {
-    border: 0;
     overflow: visible;
-    width: 594px;
-    height: 70px;
-    line-height: 28px;
+    width: 70%;
+    /* height: 70px; */
+    line-height: 2;
     margin-top: 50px;
     text-align: center;
     font-family: Hiragino Kaku Gothic ProN;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    color: rgba(255,255,255,1);
+    font-size: clamp(7px, 1.5vw, 50px);
+    color: rgba(255, 255, 255, 1);
     z-index: 1;
 }
 #nav-logo {
-position: absolute;
-    width: 196.315px;
-    height: 38.153px;
+    width: 30%;
+    max-width: 197px;
+    height: 100%;
+    position: absolute;
+    /* width: 196.315px; */
+    display: flex;
+    /* height: 38.153px; */
     left: 5%;
     /* top: 86px; */
     overflow: visible;
+        top: 30%;
 }
 #logo-mini {
     position: absolute;
-    width: 196.315px;
-    height: 38.153px;
+    width: 100%;
+    /* width: clamp(10px, 50%, 15px);; */
     left: 0px;
     top: 0px;
     overflow: visible;
@@ -453,17 +441,35 @@ position: absolute;
     top: 665px;
     /* position: absolute; */
     overflow: visible;
-    width: 294px;
+    /* width: 100%; */
     white-space: nowrap;
     --web-animation: fadein undefineds undefined;
     --web-action-type: page;
     --web-action-target: Philosiphy.html;
     cursor: pointer;
-    text-align: left;
     font-family: Hiragino Kaku Gothic ProN;
     font-style: normal;
     font-weight: normal;
     font-size: 35px;
+    color: rgba(255,255,255,1);
+}
+#mission-link {
+    border: 0;
+    left: 424px;
+    top: 665px;
+    /* position: absolute; */
+    overflow: visible;
+    width: 100%;
+    white-space: nowrap;
+    --web-animation: fadein undefineds undefined;
+    --web-action-type: page;
+    --web-action-target: Philosiphy.html;
+    cursor: pointer;
+    font-family: Hiragino Kaku Gothic ProN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: clamp(8px, 2vw, 70px);
+    padding: 10px 0px;
     color: rgba(255,255,255,1);
 }
 #aai {
@@ -582,10 +588,8 @@ position: absolute;
 }
 .aaq {
     overflow: visible;
-    /* position: absolute; */
     width: 35px;
     height: 35px;
-    /* transform: translate(-1735.5px, -76.5px) matrix(1,0,0,1,1735.5,76.5) rotate(90deg); */
     transform-origin: center;
     left: 0px;
     top: 0px;
@@ -621,9 +625,11 @@ position: absolute;
 }
 
 .menu-icon {
-  display: inline-block;
-  width: 40px;
-  height: 20px;
+    display: inline-block;
+    width: 35px;
+    height: 16px;
+    right: 20px;
+    position: absolute;
 }
 #nav-menu {
     position: absolute;
@@ -664,15 +670,7 @@ position: absolute;
     top: 0px; */
     transform: matrix(1,0,0,1,0,0);
 }
-/* #aaw {
-    fill: transparent;
-    stroke: rgba(255,255,255,1);
-    stroke-width: 2px;
-    stroke-linejoin: miter;
-    stroke-linecap: butt;
-    stroke-miterlimit: 4;
-    shape-rendering: auto;
-} */
+
 .nav-menu-line {
     overflow: visible;
     position: absolute;
@@ -685,48 +683,44 @@ position: absolute;
 #nav-menu-line {
     fill: transparent;
 }
-/* .aax {
-    position: absolute;
-    overflow: visible;
-    width: 117px;
-    height: 71px;
-    left: 0px;
-    top: 0px;
-} */
+
 .about-images {
-    width: -webkit-fill-available;
     display: flex;
     height: auto;
-    position: relative;  /* 子の absolute の基準になる */
-  width: 100%;         /* 必要に応じて調整 */
+    position: relative;
+    width: 100%;
+    flex-direction: column;
 }
 
 #about-ju, #about-i, #about-shoku, #about-all {
-    position: absolute;
     height: auto;
 }
 
 #about-ju { 
-    top: -60px;
-    left: 0px;
-    width: 30%;
-    z-index: 5000;
+    width: 35%;
+    /* z-index: 5000; */
+    margin-top: -90px;
+    z-index: 1;
 }
 #about-shoku { 
-    top: 100px;
     right: 0px;
     width: 40%;
+    margin-top: -215px;
+    margin-left: 60%;
  }
 #about-i {
-    top: 1000px;
-    width: 30%;
-    left: 20%;
+    /* top: 1000px; */
+    width: 35%;
+    /* top: 100px; */
+    margin-top: -150px;
+    margin-left: 25%;
 }
 #about-all { 
-    top: 1700px;
-    width: 50%;
-    right: 0px;
+    margin-top: 10px;
+    width: clamp(700px, 50vw, 1200px);
+    margin-left: clamp(100px, 50vw, 277px);
 }
+
 .footer {
     background-image: none;
     background-color: rgb(28, 12, 12);
@@ -780,27 +774,6 @@ position: absolute;
     width: 33%;
 }
 
-#footer-about {
-    border: 0;
-    left: 622px;
-    top: 6288px;
-    position: absolute;
-    overflow: visible;
-    width: 678px;
-    height: 27px;
-    --web-animation: fadein 0.30000001192092896s ease-out;
-    --web-action-type: page;
-    --web-action-target: About.html;
-    cursor: pointer;
-    line-height: 32px;
-    margin-top: -8.5px;
-    text-align: center;
-    font-family: Hiragino Kaku Gothic ProN;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    color: rgba(255,255,255,1);
-}
 #footer-top {
     border: 0;
     left: 1199px;
@@ -965,7 +938,6 @@ position: absolute;
 }
 .footer-first {
     overflow: visible;
-    /* position: absolute; */
     width: 10.885px;
     height: 73.135px;
     left: 329px;
@@ -977,7 +949,6 @@ position: absolute;
 }
 .footer-c {
     overflow: visible;
-    /* position: absolute; */
     width: 10.884px;
     height: 73.135px;
     left: 694.427px;
@@ -989,7 +960,6 @@ position: absolute;
 }
 .footer-o {
     overflow: visible;
-    /* position: absolute; */
     width: 41.194px;
     height: 48.174px;
     left: 363.727px;
@@ -1001,7 +971,6 @@ position: absolute;
 }
 .footer-r {
     overflow: visible;
-    /* position: absolute; */
     width: 48.175px;
     height: 48.175px;
     left: 414.94px;
@@ -1013,7 +982,6 @@ position: absolute;
 }
 .footer-v {
     overflow: visible;
-    /* position: absolute; */
     width: 43.558px;
     height: 45.824px;
     left: 523.743px;
@@ -1025,7 +993,6 @@ position: absolute;
 }
 .footer-u {
     overflow: visible;
-    /* position: absolute; */
     width: 36.892px;
     height: 46.99px;
     left: 581.062px;
@@ -1037,7 +1004,6 @@ position: absolute;
 }
 .footer-s {
     overflow: visible;
-    /* position: absolute; */
     width: 33.852px;
     height: 48.175px;
     left: 633.49px;
@@ -1049,47 +1015,28 @@ position: absolute;
 }
 .footer-end {
     overflow: visible;
-    /* position: absolute; */
     width: 33.568px;
     height: 45.824px;
     left: 477.72px;
     top: 7345.66px;
     transform: matrix(1,0,0,1,0,0);
 }
-/* #abv {
-    position: absolute;
-    width: 100%;
-    height: 828px;
-    left: 0px;
-    top: 4985px;
-    overflow: visible;
-    --web-animation: fadein 0.30000001192092896s ease-out;
-    --web-action-type: page;
-    --web-action-target: .html;
-    cursor: pointer;
-} */
 #genre-i-img {
-    /* position: absolute; */
     width: 34%;
-    /* /* height: 828px; */
     left: 0px;
     top: 0px;
     overflow: visible;
     z-index: 1;
 }
 #genre-shoku-img {
-    /* position: absolute; */
     width: 34%;
-    /* /* height: 828px; */
     left: 34%;
     top: 0px;
     overflow: visible;
     z-index: 1;
 }
 #genre-ju-img {
-    /* position: absolute; */
     width: 34%;
-    /* /* height: 828px; */
     right: 0px;
     top: 0px;
     overflow: visible;
@@ -1103,13 +1050,12 @@ position: absolute;
     align-content: center;
     height: 118px;
     left: 0;
-    top: 355px;
+    /* top: 355px; */
     overflow: visible;
     z-index: 1;
 }
 #genre-i-en {
     border: 0;
-    /* left: 94px; */
     top: 56px;
     position: relative;
     overflow: visible;
@@ -1120,14 +1066,12 @@ position: absolute;
     font-family: Hiragino Kaku Gothic ProN;
     font-style: normal;
     font-weight: normal;
-    font-size: 19px;
+    font-size: clamp(10px, 5vw, 15px);
     color: rgba(255, 255, 255, 1);
     z-index: 1;
 }
 #genre-i-jp {
     border: 0;
-    /* left: 94px; */
-    /* top: 97px; */
     position: absolute;
     overflow: visible;
     width: 100%;
@@ -1137,7 +1081,7 @@ position: absolute;
     font-family: Heisei Mincho Std;
     font-style: normal;
     font-weight: normal;
-    font-size: 75px;
+    font-size: clamp(10px, 6vw, 70px);
     color: rgba(255,255,255,1);
     z-index: 1;
 }
@@ -1149,14 +1093,12 @@ position: absolute;
     align-items: center;
     align-content: center;
     height: 118px;
-    /* left: 189px; */
-    top: 355px;
+    /* top: 355px; */
     overflow: visible;
     z-index: 1;
 }
 #genre-shoku-en {
     border: 0;
-    /* left: 94px; */
     top: 56px;
     position: relative;
     overflow: visible;
@@ -1167,14 +1109,12 @@ position: absolute;
     font-family: Hiragino Kaku Gothic ProN;
     font-style: normal;
     font-weight: normal;
-    font-size: 19px;
+    font-size: clamp(10px, 5vw, 15px);
     color: rgba(255, 255, 255, 1);
     z-index: 1;
 }
 #genre-shoku-jp {
     border: 0;
-    /* left: 94px; */
-    /* top: 97px; */
     position: absolute;
     overflow: visible;
     width: 100%;
@@ -1184,7 +1124,7 @@ position: absolute;
     font-family: Heisei Mincho Std;
     font-style: normal;
     font-weight: normal;
-    font-size: 75px;
+    font-size: clamp(10px, 6vw, 70px);
     color: rgba(255,255,255,1);
     z-index: 1;
 }
@@ -1196,13 +1136,12 @@ position: absolute;
     align-content: center;
     height: 118px;
     right: 0px;
-    top: 355px;
+    /* top: 355px; */
     overflow: visible;
     z-index: 1;
 }
 #genre-ju-en {
     border: 0;
-    /* left: 94px; */
     top: 56px;
     position: relative;
     overflow: visible;
@@ -1213,7 +1152,7 @@ position: absolute;
     font-family: Hiragino Kaku Gothic ProN;
     font-style: normal;
     font-weight: normal;
-    font-size: 19px;
+    font-size: clamp(10px, 5vw, 15px);
     color: rgba(255, 255, 255, 1);
     z-index: 1;
 }
@@ -1230,7 +1169,7 @@ position: absolute;
     font-family: Heisei Mincho Std;
     font-style: normal;
     font-weight: normal;
-    font-size: 75px;
+    font-size: clamp(10px, 6vw, 70px);
     color: rgba(255,255,255,1);
     z-index: 1;
 }
@@ -1238,18 +1177,17 @@ position: absolute;
     border: 0;
     left: 492px;
     top: 6169px;
-    /* position: absolute; */
     overflow: visible;
-    width: 938px;
-    height: 75px;
-    line-height: 30px;
+    width: 80%;
+    line-height: 1;
+    line-height: 2;
     text-align: center;
     font-family: Hiragino Kaku Gothic ProN;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
-    color: rgba(255,255,255,1);
-    margin: 100px;
+    font-size: clamp(8px, 2vw, 70px);
+    color: rgba(255, 255, 255, 1);
+    margin: 20px;
     z-index: 1;
 }
 #studio {
@@ -1269,7 +1207,182 @@ position: absolute;
     font-family: Heisei Mincho Std;
     font-style: normal;
     font-weight: normal;
-    font-size: 70px;
+    font-size: clamp(36px, 9vw, 70px);
     color: rgba(255,255,255,1);
     z-index: 1;
+}
+#menu-insta-favicon, #footer-insta-favicon {
+    display: none;
+}
+
+
+@media (max-width: 797px) {
+  .about-circle {
+    display: none;
+  }
+  .x-icon2 {
+    display: flex;
+  }
+  .about-graphics-items-row2 {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+  }
+    .x-icon, .x-icon2 {
+        color: white;
+        width: clamp(10px, 6vw, 15px);
+        margin: 10% 0 8% 0;
+    }
+    #about-graphics-text {
+        width: 150%;
+    }
+    .genres {
+        display: flow;
+    }
+    .genre-images, .genre-texts {
+        align-content: center;
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+        }
+    .genre-texts {
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        display: flex;
+            position: absolute;
+    top: 0px;
+            width: -webkit-fill-available;
+    }
+    #genre-i-img, #genre-shoku-img, #genre-ju-img {
+        width: 100%;
+        height: 180px;
+        left: 0px;
+        object-fit: cover;
+        z-index: 1;
+        overflow: hidden;
+    }
+    #genre-i-img, #genre-ju-img {
+        object-position: center 85%;
+    }
+    #genre-i, #genre-shoku, #genre-ju {
+    position: relative;
+        left: 4%;
+        height: 180px;
+        top: 5rem;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+    .mission {
+        padding-top: 0px;
+    }
+    #studio {
+        width: 100%;
+    }
+    .footer-top {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-logo {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: none;
+        width: 100%;
+        display: contents;
+        align-items: center;
+    }
+    .footer-other {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: space-between;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        line-height: 35.5px;
+    }
+    .footer-other-c1, .footer-other-c2, .footer-other-c3 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    #footer-logo {
+        padding-bottom: 18px;
+
+    }
+    #footer-top, #footer-about, #footer-phil, #footer-genre-i,#footer-genre-shoku, #footer-genre-ju, #footer-contact, #footer-insta  {
+        font-size: 11px;
+        width: 34%;
+        text-align: center;
+    }
+    #aaj, #footer-insta  {
+        display: none; 
+    }
+    #menu-insta-favicon, #footer-insta-favicon {
+        display: flex;
+        font-weight: 800;
+        color: white;
+        padding: 10px;
+    }
+    #footer-top, #footer-about, #footer-phil {
+        width: 34%;
+    }
+    #footer-genre {
+        display: flex;
+        /* position: absolute; */
+        width: 100%;
+        justify-content: space-between;
+        height: auto;
+    }
+    .footer-other-c3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+    .about-graphics-items {
+        margin: 81px 10px;
+        position: relative;
+    }
+    #about-ju {
+        width: 50%;
+        z-index: 1;
+        margin-top: 0;
+    }
+    #about-shoku {
+        right: 0px;
+        width: 40%;
+        margin-top: -115px;
+        margin-left: 60%;
+    }
+    #about-i {
+        width: 35%;
+        margin-top: -50px;
+        margin-left: 15%;
+    }
+    #about-all {
+        margin-top: 40px;
+        width: clamp(300px, 50vw, 1200px);
+        margin-left: clamp(100px, 20vw, 277px);
+    }
+    .menu-list {
+        flex-direction: column;
+        padding-left: 10px;
+    }
+    #aaf, #aag, #aah, #aal, #aam, #aan, #aai, #aaj {
+        font-size: 15px;
+        line-height: 3;
+    }
 }
