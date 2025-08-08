@@ -16,9 +16,6 @@
 <title>(CORVUS)</title>
 <link rel="stylesheet" href="style/corvus.css">
 <script src="style/corvus.js"></script>
-
-
-
 </head>
 
 
@@ -29,35 +26,35 @@
 		</div>
 		<!-- Overlay Menu -->
 		<div id="menu">
-			<div id="aad" style="text-align:center; margin-top:2rem;">
-				<img id="aae" src="img/aae.png" srcset="img/aae.png 1x, img/aae@2x.png 2x" style="width:200px;">
+			<div id="menu-logo">
+				<img id="menu-logo-img" src="img/menu-logo-img.png" srcset="img/menu-logo-img.png 1x, img/menu-logo-img@2x.png 2x">
 			</div>
 
 			<div class="menu-list">
 				<div class="menu-list-col">
-					<div id="aaf"　div onclick="goTo('index.html')" style="cursor: pointer;"><span>> TOP</span></div>
-					<div id="aag" div onclick="goTo('about/about.html')" style="cursor: pointer;"><span>> ABOUT</span></div>
-					<div id="aah" onclick="goTo('philosophy/philosophy.html')" style="cursor: pointer;"><span>> PHILOSOPHY</span></div>					
+					<div class="menu-list-item" id="menu-top" onclick="goTo('index.html')"><span>> TOP</span></div>
+					<div class="menu-list-item" id="menu-about" onclick="goTo('about/about.html')"><span>> ABOUT</span></div>
+					<div class="menu-list-item" id="menu-phil" onclick="goTo('philosophy/philosophy.html')"><span>> PHILOSOPHY</span></div>					
 				</div>
 				<div class="menu-list-col">
-					<div id="aal" onclick="goTo('contents/contents.html')" style="cursor: pointer;"><span>> 衣</span></div>
-					<div id="aam" onclick="goTo('contents/contents.html')" style="cursor: pointer;"><span>> 食</span></div>
-					<div id="aan" onclick="goTo('contents/contents.html')" style="cursor: pointer;"><span>> 住</span></div>
+					<div class="menu-list-item" id="menu-i" onclick="goTo('contents/contents.html')"><span>> 衣</span></div>
+					<div class="menu-list-item" id="menu-shoku" onclick="goTo('contents/contents.html')"><span>> 食</span></div>
+					<div class="menu-list-item" id="menu-ju" onclick="goTo('contents/contents.html')"><span>> 住</span></div>
 				</div>
 				<div class="menu-list-col">
-					<div id="aai" onclick="goTo('contact/contact.html')" style="cursor: pointer;"><span>> CONTACT</span></div>
-					<div id="aaj" onclick="window.open('https://www.instagram.com/shuichi.osawa/', '_blank')" style="cursor: pointer;"><span>> INSTAGRAM</span></div>
+					<div class="menu-list-item" id="menu-contact" onclick="goTo('contact/contact.html')"><span>> CONTACT</span></div>
+					<div class="menu-list-item" id="menu-insta" onclick="window.open('https://www.instagram.com/shuichi.osawa/', '_blank')"><span>> INSTAGRAM</span></div>
 					<i id="menu-insta-favicon" class="fab fa-instagram"></i>
 				</div>
 			</div>
 
 			<!-- Close Button -->
-			<div id="aao" style="position:absolute; top:1rem; right:1rem; cursor:pointer;">
-				<svg class="aap" viewBox="0 0 39 39" style="width:30px; height:30px;">
-				<path id="aap" d="M 0 0 L 39 39" stroke="white" stroke-width="2"/>
+			<div id="close-icon">
+				<svg class="close-icon-svg" viewBox="0 0 39 39" >
+				<path id="close-icon-path" d="M 0 0 L 39 39" stroke="white" stroke-width="2"/>
 				</svg>
-				<svg class="aaq" viewBox="0 0 39 39" style="width:30px; height:30px; position:absolute; top:0; left:0;">
-				<path id="aaq" d="M 0 39 L 39 0" stroke="white" stroke-width="2"/>
+				<svg class="close-icon-svg" viewBox="0 0 39 39">
+				<path id="close-icon-path" d="M 0 39 L 39 0"/>
 				</svg>
 			</div>
 		</div>
@@ -95,16 +92,13 @@
 							<div id="about-graphics-i">
 								<span>（ 衣 ）</span>
 							</div>
-							<div id="about-graphics-clothing">
+							<div id="about-graphics-clothing" class="about-graphics-en">
 								<span>Clothing</span>
 							</div>
 						</div>
 					</div>
 
 					<div class="about-graphics-items-row">
-						<!-- <div class="about-graphics-x">
-							x
-						</div> -->
 						<svg class="x-icon" viewBox="0 0 24 24">
 							<path d="M 0 0 L 24 24 M 24 0 L 0 24" stroke="white" stroke-width="2" />
 						</svg>
@@ -116,7 +110,7 @@
 							<div id="about-graphics-ju">
 								<span>（ 住 ）</span>
 							</div>
-							<div id="about-graphics-shelter">
+							<div id="about-graphics-shelter" class="about-graphics-en">
 								<span>Shelter</span>
 							</div>
 						</div>
@@ -128,7 +122,7 @@
 							<div id="about-graphics-shoku">
 								<span>（ 食 ）</span>
 							</div>
-							<div id="about-graphics-food">
+							<div id="about-graphics-food" class="about-graphics-en">
 								<span>Food</span>
 							</div>
 						</div>
@@ -138,7 +132,7 @@
 						<span>CORVUSの理念を説明する場所。CORVUSが社会に対して、未来に対して、どんな価値を生み出したいのかという“思想”を言葉にする場所です。CORVUSの理念を説明する場所。CORVUSが社会に対して、未来に対して、どんな価値を生み出したいのかという“思想”を言葉にする場所です。</span>
 					</div>
 					<div  id="about-graphics-link">
-						<span onclick="goTo('philosophy/philosophy.html')" style="cursor: pointer;">> PHILOSOPHY</span>
+						<span onclick="goTo('philosophy/philosophy.html')">> PHILOSOPHY</span>
 					</div>
 				</div>
 
@@ -153,39 +147,39 @@
 			</div>
 		</div>
 
-		<div class="genres"  id="abv">
+		<div class="genres">
 			<div class="bg-filter"></div>
 			<div class="genre-images">
-				<img id="genre-i-img" src="img/genre-i.png" srcset="img/genre-i.png 1x, img/genre-i@2x.png 2x">
+				<img id="genre-i-img" class="genre-img" src="img/genre-i.png" srcset="img/genre-i.png 1x, img/genre-i@2x.png 2x">
 					
-				<img id="genre-shoku-img" src="img/genre-shoku.png" srcset="img/genre-shoku.png 1x, img/genre-shoku@2x.png 2x">
+				<img id="genre-shoku-img" class="genre-img" src="img/genre-shoku.png" srcset="img/genre-shoku.png 1x, img/genre-shoku@2x.png 2x">
 					
-				<img id="genre-ju-img" src="img/genre-ju.png" srcset="img/genre-ju.png 1x, img/genre-ju@2x.png 2x">
+				<img id="genre-ju-img" class="genre-img" src="img/genre-ju.png" srcset="img/genre-ju.png 1x, img/genre-ju@2x.png 2x">
 			</div>
 			
 			<div class="genre-texts">
-				<div id="genre-i" onclick="goTo('contents/contents.html')" style="cursor: pointer;">
-					<div id="genre-i-en">
-						<span>Clothing</span>
-					</div>
-					<div id="genre-i-jp">
+				<div id="genre-i" class="genre-text" onclick="goTo('contents/contents.html')">
+					<div class="genre-text-jp">
 						<span>（ 衣 ）</span>
 					</div>
-				</div>
-				<div id="genre-shoku" onclick="goTo('contents/contents.html')" style="cursor: pointer;">
-					<div id="genre-shoku-en">
-						<span>Food</span>
+					<div class="genre-text-en">
+						<span>Clothing</span>
 					</div>
-					<div id="genre-shoku-jp">
+				</div>
+				<div id="genre-shoku" class="genre-text" onclick="goTo('contents/contents.html')">
+					<div class="genre-text-jp">
 						<span>（ 食 ）</span>
 					</div>
-				</div>
-				<div id="genre-ju" onclick="goTo('contents/contents.html')" style="cursor: pointer;">
-					<div id="genre-ju-en">
-						<span>Shelter</span>
+					<div class="genre-text-en">
+						<span>Food</span>
 					</div>
-					<div id="genre-ju-jp">
+				</div>
+				<div id="genre-ju" class="genre-text" onclick="goTo('contents/contents.html')">
+					<div class="genre-text-jp">
 						<span>（ 住 ）</span>
+					</div>
+					<div class="genre-text-en">
+						<span>Shelter</span>
 					</div>
 				</div>
 			</div>
@@ -198,7 +192,7 @@
 			</div>
 			<div id="mission-text">
 				<span>CORVUSという名前に込めた想いや、「なぜこのブランドを始めたのか」という動機を伝える場所です。<br/>原点やブランド立ち上げに至るまでの“文脈”や“想い”を語る文章を想定しています。<br/>CORVUSが届けたいのは「単なる“モノ”ではなく、暮らしや生き方への提案であること」のような文章エリア。</span>
-			<div id="mission-link" onclick="goTo('about/about.html')" style="cursor: pointer;"><span>> ABOUT</span></div>	
+			<div id="mission-link" onclick="goTo('about/about.html')"><span>> ABOUT</span></div>	
 			</div>
 				
 			<img id="studio" src="img/studio.png" srcset="img/studio.png 1x, img/studio@2x.png 2x">
@@ -212,35 +206,35 @@
 				</div>
 				<div class="footer-other">
 					<div class="footer-other-c1">
-						<div id="footer-top" onclick="goTo('index.html')" style="cursor: pointer;">
+						<div id="footer-top" class="footer-other-item" onclick="goTo('index.html')">
 							<span>TOP</span>
 						</div>
-						<div  id="footer-about" onclick="goTo('about/about.html')" style="cursor: pointer;">
+						<div  id="footer-about" class="footer-other-item" onclick="goTo('about/about.html')" style="cursor: pointer;">
 							<span>ABOUT</span>
 						</div>
-						<div  id="footer-phil" onclick="goTo('philosophy/philosophy.html')" style="cursor: pointer;">
+						<div  id="footer-phil" class="footer-other-item" onclick="goTo('philosophy/philosophy.html')" style="cursor: pointer;">
 							<span>PHILOSOPHY</span>
 						</div>
 					</div>
 					<div class="footer-other-c2">
 						<div  id="footer-genre" >
-							<div id="footer-genre-i" onclick="goTo('contents/contents.html')" style="cursor: pointer;">
+							<div id="footer-genre-i" class="footer-other-item" onclick="goTo('contents/contents.html')" style="cursor: pointer;">
 								<span>衣</span>
 							</div>
-							<div id="footer-genre-shoku" onclick="goTo('contents/contents.html')" style="cursor: pointer;">
+							<div id="footer-genre-shoku" class="footer-other-item" onclick="goTo('contents/contents.html')" style="cursor: pointer;">
 								<span>食</span>
 							</div>
-							<div id="footer-genre-ju" onclick="goTo('contents/contents.html')" style="cursor: pointer;">
+							<div id="footer-genre-ju" class="footer-other-item" onclick="goTo('contents/contents.html')" style="cursor: pointer;">
 								<span>住</span>
 							</div>
 						</div>
 					</div>
 					<div class="footer-other-c3">
-						<div  id="footer-contact" onclick="goTo('contact/contact.html')" style="cursor: pointer;">
+						<div  id="footer-contact" class="footer-other-item" onclick="goTo('contact/contact.html')" style="cursor: pointer;">
 							<span>CONTACT</span>
 						</div>
 						<div id="footer-insta">
-							<span onclick="window.open('https://www.instagram.com/shuichi.osawa/', '_blank')" style="cursor: pointer;">INSTAGRAM</span>
+							<span class="footer-other-item" onclick="window.open('https://www.instagram.com/shuichi.osawa/', '_blank')" style="cursor: pointer;">INSTAGRAM</span>
 						</div>
 						<i id="footer-insta-favicon" class="fab fa-instagram"></i>
 

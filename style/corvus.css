@@ -1,13 +1,13 @@
 
-.mediaViewInfo {
+/* .mediaViewInfo {
     --web-view-name: top;
     --web-view-id: top;
     --web-scale-on-resize: true;
     --web-enable-deep-linking: true;
-}
-:root {
+} */
+/* :root {
     --web-view-ids: top;
-}
+} */
 * {
     margin: 0;
     padding: 0;
@@ -24,39 +24,40 @@
     top: 0;
     z-index: 1000;
     background-color: transparent;
+    /* background-image: url('../img/bg.png'); */
     padding: 1rem 2rem;
 }
 
 .top, .about, .genres, .mission, .footer {
     background-image: url('../img/bg.png');
-    background-size: auto;     /* 画面全体にフィットさせる */
+    background-size: auto; 
     background-position: center;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: -webkit-fill-available;
-    flex-direction: column; /* ← ロゴとテキストを縦に並べる */
+    flex-direction: column; 
     padding: 5rem 0rem 5rem 0rem;
 }
 .top {
     height: 100vh;
     background-image: url('../img/bg.png');
-    background-size: auto;     /* 画面全体にフィットさせる */
+    background-size: auto; 
     background-position: center;
 }
 .top-bg-filter {
   position: absolute;
   inset: 0;
   backdrop-filter: brightness(60%);
-  background-color: rgba(0, 0, 0, 0.1); /* 必要に応じて濃さ追加 */
+  background-color: rgba(0, 0, 0, 0.1); 
   z-index: 0;
 }
 .bg-filter {
   position: absolute;
   inset: 0;
   backdrop-filter: brightness(60%);
-  background-color: rgba(0, 0, 0, 0.1); /* 必要に応じて濃さ追加 */
+  background-color: rgba(0, 0, 0, 0.1);
   z-index: 0;
 }
 .genres {
@@ -80,6 +81,18 @@
     align-items: center;
     justify-content: center;
 }
+.genre-text {
+    position: absolute;
+    width: 34%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    height: 118px;
+    left: 0;
+    overflow: visible;
+    z-index: 1;
+    cursor: pointer;
+}
 .about-graphics {
     display: flex;
     justify-content: center;
@@ -88,19 +101,14 @@
     width: -webkit-fill-available;
     z-index: 1;
 }
-
 #top {
-    background-size: auto;     /* 画面全体にフィットさせる */
+    background-size: auto;  
     background-position: center;
     position: absolute;
     width: 100%;
     display: flex;
     background-color: rgba(39, 22, 11, 1);
     overflow: hidden;
-    --web-view-name: top;
-    --web-view-id: top;
-    --web-scale-on-resize: true;
-    --web-enable-deep-linking: true;
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: center;
@@ -108,197 +116,12 @@
     align-items: center;
 }
 
-@keyframes slide-left {
-
+/* @keyframes slide-left {
     0% {
         transform: translateX(100%);
     }
+} */
 
-}
-.about-graphics-items {
-    margin: 81px 10px;
-    position: absolute;
-    display: flex;
-    top: 5rem;
-    width: 50%;
-    height: auto;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-        margin-top: 5%;
-}
-
-.about-graphics-items-row, .about-graphics-items-row2 {
-    /* position: absolute; */
-    display: flex;
-    top: 5rem;
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    align-content: center;
-    align-items: stretch;
-    justify-content: space-around;
-}
-
-.about-graphics-item {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-}
-#about-circle {
-    fill: transparent;
-    stroke: rgba(255,255,255,1);
-    stroke-width: 1px;
-    stroke-linejoin: miter;
-    stroke-linecap: butt;
-    stroke-miterlimit: 4;
-    shape-rendering: auto;
-}
-.about-circle {
-    overflow: visible;
-    width: 50%;
-    aspect-ratio: 1 / 1;
-    display: flex;
-    flex-direction: column;
-}
-#about-graphics-text {
-    position: relative;
-        padding-top: 15px;
-    border: 0;
-    /* bottom: 280px; */
-    overflow: visible;
-    width: 70%;
-    /* height: 145px; */
-    line-height: 2;
-    text-align: center;
-    font-family: Hiragino Kaku Gothic ProN;
-    font-style: normal;
-    font-weight: normal;
-    font-size: clamp(8px, 1vw, 15px);
-    color: rgba(255,255,255,1);
-}
-#about-graphics-link {
-    position: relative;
-    border: 0;
-    /* bottom: 250px; */
-    overflow: visible;
-    width: 678px;
-    height: 27px;
-    --web-animation: fadein 0.30000001192092896s ease-out;
-    --web-action-type: page;
-    --web-action-target: Philosiphy.html;
-    cursor: pointer;
-    line-height: 32px;
-    /* margin-top: -8.5px; */
-    text-align: center;
-    font-family: Hiragino Kaku Gothic ProN;
-    font-style: normal;
-    font-weight: normal;
-font-size: clamp(9px, 2vw, 30px);
-    color: rgba(255,255,255,1);
-}
-#about-graphics-clothing {
-    border: 0;
-    /* left: 922px;
-    top: 1481px; */
-    /* position: absolute; */
-    overflow: visible;
-    /* width: 79px; */
-    white-space: nowrap;
-    text-align: center;
-    font-family: Hiragino Kaku Gothic ProN;
-    font-style: normal;
-    font-weight: normal;
-font-size: clamp(10px, 1vw, 35px);
-    color: rgba(255,255,255,1);
-}
-#about-graphics-i {
-    border: 0;
-    /* left: 828px;
-    top: 1384px; */
-    /* position: absolute; */
-    overflow: visible;
-    /* width: 263px; */
-    white-space: nowrap;
-    text-align: center;
-    font-family: Heisei Mincho Std;
-    font-style: normal;
-    font-weight: normal;
-font-size: clamp(10px, 5vw, 70px);
-    color: rgba(255,255,255,1);
-}
-#about-graphics-shelter {
-    border: 0;
-    /* left: 1115px;
-    top: 1709px; */
-    /* position: absolute; */
-    overflow: visible;
-    /* width: 67px; */
-    white-space: nowrap;
-    text-align: center;
-    font-family: Hiragino Kaku Gothic ProN;
-    font-style: normal;
-    font-weight: normal;
-font-size: clamp(10px, 1vw, 35px);
-    color: rgba(255,255,255,1);
-}
-#about-graphics-ju {
-    border: 0;
-    /* left: 1015px;
-    top: 1613px; */
-    /* position: absolute; */
-    overflow: visible;
-    /* width: 263px; */
-    white-space: nowrap;
-    text-align: center;
-    font-family: Heisei Mincho Std;
-    font-style: normal;
-    font-weight: normal;
-font-size: clamp(10px, 5vw, 70px);
-    color: rgba(255,255,255,1);
-}
-#about-graphics-food {
-    border: 0;
-    /* left: 751px;
-    top: 1709px; */
-    /* position: absolute; */
-    overflow: visible;
-    /* width: 45px; */
-    white-space: nowrap;
-    text-align: center;
-    font-family: Hiragino Kaku Gothic ProN;
-    font-style: normal;
-    font-weight: normal;
-font-size: clamp(10px, 1vw, 35px);
-    color: rgba(255,255,255,1);
-}
-#about-graphics-shoku {
-    border: 0;
-    /* left: 642px;
-    top: 1613px; */
-    /* position: absolute; */
-    overflow: visible;
-    /* width: 263px; */
-    white-space: nowrap;
-    text-align: center;
-    font-family: Heisei Mincho Std;
-    font-style: normal;
-    font-weight: normal;
-font-size: clamp(10px, 5vw, 70px);
-    color: rgba(255,255,255,1);
-}
-.x-icon,   .x-icon2 {
-    color: white;
-    width: clamp(10px, 6vw, 20px);
-    margin: 10% 0 2% 0;
-}
-.x-icon2 {
-    display: none;
-}
 #top-logo {
     position: relative;
     width: 60%;
@@ -335,13 +158,10 @@ font-size: clamp(10px, 5vw, 70px);
     max-width: 197px;
     height: 100%;
     position: absolute;
-    /* width: 196.315px; */
     display: flex;
-    /* height: 38.153px; */
     left: 5%;
-    /* top: 86px; */
     overflow: visible;
-        top: 30%;
+    top: 30%;
 }
 #logo-mini {
     position: absolute;
@@ -357,76 +177,37 @@ font-size: clamp(10px, 5vw, 70px);
     position: fixed;
     top: 0;
     right: 0;
-    height: 100vh;
-    width: 100vw;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.95);
     color: white;
     transform: translateX(100%);
     transition: transform 0.4s ease;
     z-index: 9999;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
-
 #menu.open {
   transform: translateX(0); /* ← 表示状態 */
 }
-#aac {
-		fill: rgba(39,22,11,1);
-	}
-.aac {
-    /* position: absolute; */
-    overflow: visible;
-    width: 1920px;
-    height: 1077px;
-    left: 0px;
-    top: 0px;
-}
-#aad {
-    /* position: absolute; */
-    width: 196.315px;
-    height: 38.153px;
+#menu-logo {
     left: 97px;
     top: 86px;
     overflow: visible;
 }
-#aae {
-    /* position: absolute; */
-    width: 196.315px;
-    height: 38.153px;
-    left: 0px;
-    top: 0px;
+#menu-logo-img {
+    width: 30%;
+    max-width: 197px;
+    position: absolute;
+    display: flex;
+    left: 5%;
     overflow: visible;
 }
-#aaf {
+.menu-list-item {
     border: 0;
-    left: 424px;
-    top: 372px;
-    /* position: absolute; */
     overflow: visible;
-    width: 119px;
     white-space: nowrap;
-    --web-animation: fadein undefineds undefined;
-    --web-action-type: page;
-    --web-action-target: top.html;
-    cursor: pointer;
-    text-align: left;
-    font-family: Hiragino Kaku Gothic ProN;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 40px;
-    color: rgba(255,255,255,1);
-}
-#aag {
-    border: 0;
-    left: 424px;
-    top: 519px;
-    /* position: absolute; */
-    overflow: visible;
-    width: 177px;
-    white-space: nowrap;
-    --web-animation: fadein undefineds undefined;
-    --web-action-type: page;
-    --web-action-target: About.html;
     cursor: pointer;
     text-align: left;
     font-family: Hiragino Kaku Gothic ProN;
@@ -435,131 +216,17 @@ font-size: clamp(10px, 5vw, 70px);
     font-size: 35px;
     color: rgba(255,255,255,1);
 }
-#aah {
-    border: 0;
-    left: 424px;
-    top: 665px;
-    /* position: absolute; */
-    overflow: visible;
-    /* width: 100%; */
-    white-space: nowrap;
-    --web-animation: fadein undefineds undefined;
-    --web-action-type: page;
-    --web-action-target: Philosiphy.html;
-    cursor: pointer;
-    font-family: Hiragino Kaku Gothic ProN;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 35px;
-    color: rgba(255,255,255,1);
-}
-#mission-link {
-    border: 0;
-    left: 424px;
-    top: 665px;
-    /* position: absolute; */
-    overflow: visible;
-    width: 100%;
-    white-space: nowrap;
-    --web-animation: fadein undefineds undefined;
-    --web-action-type: page;
-    --web-action-target: Philosiphy.html;
-    cursor: pointer;
-    font-family: Hiragino Kaku Gothic ProN;
-    font-style: normal;
-    font-weight: normal;
-    font-size: clamp(8px, 2vw, 70px);
-    padding: 10px 0px;
-    color: rgba(255,255,255,1);
-}
-#aai {
-    border: 0;
-    left: 1224px;
-    top: 372px;
-    /* position: absolute; */
-    overflow: visible;
-    width: 230px;
-    white-space: nowrap;
-    --web-animation: fadein undefineds undefined;
-    --web-action-type: page;
-    --web-action-target: CONTACT.html;
-    cursor: pointer;
-    text-align: left;
-    font-family: Hiragino Kaku Gothic ProN;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 35px;
-    color: rgba(255,255,255,1);
-}
-#aaj {
-    border: 0;
-    left: 1224px;
-    top: 519px;
-    /* position: absolute; */
-    overflow: visible;
-    width: 274px;
-    white-space: nowrap;
-    text-align: left;
-    font-family: Hiragino Kaku Gothic ProN;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 35px;
-    color: rgba(255,255,255,1);
-}
-#aal {
-    border: 0;
-    left: 0px;
-    top: 0px;
-    /* position: absolute; */
-    overflow: visible;
-    width: 75px;
-    white-space: nowrap;
-    text-align: left;
-    font-family: Hiragino Kaku Gothic ProN;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 40px;
-    color: rgba(255,255,255,1);
-}
-#aam {
-    border: 0;
-    left: 0px;
-    top: 147px;
-    /* position: absolute; */
-    overflow: visible;
-    width: 75px;
-    white-space: nowrap;
-    text-align: left;
-    font-family: Hiragino Kaku Gothic ProN;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 40px;
-    color: rgba(255,255,255,1);
-}
-#aan {
-    border: 0;
-    left: 0px;
-    top: 293px;
-    /* position: absolute; */
-    overflow: visible;
-    width: 75px;
-    white-space: nowrap;
-    text-align: left;
-    font-family: Hiragino Kaku Gothic ProN;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 40px;
-    color: rgba(255,255,255,1);
-}
-#aao {
-    /* position: absolute; */
+
+#close-icon {
+    position:absolute; 
+    top: 2rem;
+    right: 2rem;
+    cursor:pointer;
     width: 35px;
     height: 35px;
-    /* left: 1741.5px; */
-    top: 75.5px;
     overflow: visible;
 }
-#aap {
+#close-icon-path {
     fill: transparent;
     stroke: rgba(255,255,255,1);
     stroke-width: 2px;
@@ -568,42 +235,22 @@ font-size: clamp(10px, 5vw, 70px);
     stroke-miterlimit: 4;
     shape-rendering: auto;
 }
-.aap {
+.close-icon-svg {
+    width:30px; 
+    height:30px;
     overflow: visible;
-    /* position: absolute; */
-    width: 40.414px;
-    height: 40.414px;
     left: 0px;
     top: 0px;
     transform: matrix(1,0,0,1,0,0);
-}
-#aaq {
-    fill: transparent;
-    stroke: rgba(255,255,255,1);
-    stroke-width: 2px;
-    stroke-linejoin: miter;
-    stroke-linecap: butt;
-    stroke-miterlimit: 4;
-    shape-rendering: auto;
-}
-.aaq {
-    overflow: visible;
-    width: 35px;
-    height: 35px;
-    transform-origin: center;
-    left: 0px;
-    top: 0px;
+    position:absolute;
 }
 .menu-list {
-    margin-top: 5rem;
-    text-align: center;
-    font-size: 1.5rem;
+    margin-top: 8rem;
     display: flex;
     text-align: center;
     font-size: 1.5rem;
     line-height: 2;
     flex-direction: row;
-    align-content: center;
     justify-content: space-around;
     align-items: flex-start;
 }
@@ -616,8 +263,6 @@ font-size: clamp(10px, 5vw, 70px);
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: flex-start;
-    align-content: flex-start;
-
 }
 .nav-menu {
   cursor: pointer;
@@ -666,8 +311,6 @@ font-size: clamp(10px, 5vw, 70px);
     position: absolute;
     width: 44px;
     height: 2px;
-    /* left: 0px;
-    top: 0px; */
     transform: matrix(1,0,0,1,0,0);
 }
 
@@ -683,22 +326,92 @@ font-size: clamp(10px, 5vw, 70px);
 #nav-menu-line {
     fill: transparent;
 }
+/* about */
+.about-graphics-items {
+    margin: 81px 10px;
+    position: absolute;
+    display: flex;
+    top: 5rem;
+    width: 50%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.about-graphics-items-row, .about-graphics-items-row2 {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+.about-graphics-item {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    font-family: Heisei Mincho Std;
+    font-size: clamp(10px, 5vw, 70px);
+    color: rgba(255,255,255,1);
+}
+#about-circle {
+    fill: transparent;
+    stroke: rgba(255,255,255,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.about-circle {
+    overflow: visible;
+    width: 50%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+}
+#about-graphics-text {
+    padding: 15px 0px;
+    width: 70%;
+    line-height: 2;
+    text-align: center;
+    font-family: Hiragino Kaku Gothic ProN;
+    font-size: clamp(8px, 1vw, 15px);
+    color: rgba(255,255,255,1);
+}
+#about-graphics-link {
+    cursor: pointer;
+    font-family: Hiragino Kaku Gothic ProN;
+    font-weight: normal;
+    font-size: clamp(9px, 1.5vw, 20px);
+    color: rgba(255, 255, 255, 1);
+}
+.about-graphics-en {
+    font-family: Hiragino Kaku Gothic ProN;
+    font-size: clamp(10px, 1vw, 35px);
+    color: rgba(255,255,255,1);
+}
+.x-icon,   .x-icon2 {
+    color: white;
+    width: clamp(10px, 6vw, 20px);
+    margin: 10% 0 2% 0;
+}
+.x-icon2 {
+    display: none;
+}
 
 .about-images {
     display: flex;
-    height: auto;
     position: relative;
     width: 100%;
     flex-direction: column;
 }
-
-#about-ju, #about-i, #about-shoku, #about-all {
-    height: auto;
-}
-
 #about-ju { 
     width: 35%;
-    /* z-index: 5000; */
     margin-top: -90px;
     z-index: 1;
 }
@@ -709,29 +422,86 @@ font-size: clamp(10px, 5vw, 70px);
     margin-left: 60%;
  }
 #about-i {
-    /* top: 1000px; */
     width: 35%;
-    /* top: 100px; */
     margin-top: -150px;
     margin-left: 25%;
 }
 #about-all { 
     margin-top: 10px;
     width: clamp(700px, 50vw, 1200px);
-    margin-left: clamp(100px, 50vw, 277px);
+    margin-left: clamp(100px, 50vw, 750px);
+}
+/* genre */
+.genre-img {
+    width: 34%;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+    z-index: 1;
+}
+.genre-text-en {
+    top: 56px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-family: Hiragino Kaku Gothic ProN;
+    font-size: clamp(10px, 5vw, 15px);
+    color: rgba(255, 255, 255, 1);
+    z-index: 1;
+}
+.genre-text-jp {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-family: Heisei Mincho Std;
+    font-size: clamp(10px, 6vw, 70px);
+    color: rgba(255,255,255,1);
+    z-index: 1;
+}
+#genre-shoku {
+    left: 33%;
+}
+#genre-ju {
+    position: absolute;
+    left: 68%;
+}
+/* mission */
+#mission-text {
+    width: 80%;
+    line-height: 2;
+    text-align: center;
+    font-family: Hiragino Kaku Gothic ProN;
+    font-size: clamp(8px, 1.5vw, 20px);
+    color: rgba(255, 255, 255, 1);
+    margin: 20px;
+    z-index: 1;
+}
+#mission-link {
+    width: 100%;
+    font-family: Hiragino Kaku Gothic ProN;
+    font-size: clamp(8px, 1.5vw, 20px);
+    padding: 10px 0px;
+    color: rgba(255,255,255,1);
+    cursor: pointer;
+}
+#studio {
+    width: 80%;
+    z-index: 1;
+}
+#mission-title {
+    font-family: Heisei Mincho Std;
+    font-size: clamp(12px, 4vw, 55px);
+    color: rgba(255,255,255,1);
+    z-index: 1;
+}
+#menu-insta-favicon, #footer-insta-favicon {
+    display: none;
 }
 
+/* footer */
 .footer {
     background-image: none;
     background-color: rgb(28, 12, 12);
-    background-position: center;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: -webkit-fill-available;
-    flex-direction: column; /* ← ロゴとテキストを縦に並べる */
-    padding: 5rem 0rem 5rem 0rem;
 }
 
 .footer-top {
@@ -741,481 +511,37 @@ font-size: clamp(10px, 5vw, 70px);
     width: -webkit-fill-available;
     flex-direction: row;
     padding: 2rem;
-    align-content: center;
     justify-content: space-around;
+    cursor: pointer;
 }
-.footer-logo {
-        margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: none;
-    width: 40%;
+#footer-logo {
+    width: clamp(100px, 100%, 300px);
 }
+
 .footer-other {
-    display: flex
-;
+    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-content: center;
     justify-content: center;
-    align-items: flex-start;
     width: 50%;
     line-height: 35.5px;
+    font-family: Hiragino Kaku Gothic ProN;
+    font-size: 15px;
+    color: rgba(255,255,255,1);
 }
 
 .footer-other-c2 {
-    display: flex
-;
+    display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
     align-items: center;;
     width: 33%;
 }
-
-#footer-top {
-    border: 0;
-    left: 1199px;
-    top: 7306px;
-    /* position: absolute; */
-    overflow: visible;
-    width: 33px;
-    white-space: nowrap;
-    text-align: left;
-    font-family: Hiragino Kaku Gothic ProN;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    color: rgba(255,255,255,1);
-}
-#footer-about {
-    border: 0;
-    left: 1199px;
-    top: 7361px;
-    /* position: absolute; */
-    overflow: visible;
-    width: 56px;
-    white-space: nowrap;
-    --web-animation: fadein 0.30000001192092896s ease-out;
-    --web-action-type: page;
-    --web-action-target: About.html;
-    cursor: pointer;
-    text-align: left;
-    font-family: Hiragino Kaku Gothic ProN;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    color: rgba(255,255,255,1);
-}
-#footer-phil {
-    border: 0;
-    left: 1199px;
-    top: 7416px;
-    /* position: absolute; */
-    overflow: visible;
-    width: 101px;
-    white-space: nowrap;
-    --web-animation: fadein 0.30000001192092896s ease-out;
-    --web-action-type: page;
-    --web-action-target: Philosiphy.html;
-    cursor: pointer;
-    text-align: left;
-    font-family: Hiragino Kaku Gothic ProN;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    color: rgba(255,255,255,1);
-}
 #copyright {
-    border: 0;
-    left: 871px;
-    top: 7545px;
-    /* position: absolute; */
-    overflow: visible;
-    width: 179px;
-    white-space: nowrap;
-    text-align: left;
     font-family: Hiragino Kaku Gothic ProN;
-    font-style: normal;
-    font-weight: normal;
     font-size: 12px;
     color: rgba(255,255,255,1);
 }
-#footer-contact {
-    border: 0;
-    left: 1500px;
-    top: 7306px;
-    /* position: absolute; */
-    overflow: visible;
-    width: 76px;
-    white-space: nowrap;
-    --web-animation: fadein 0.30000001192092896s ease-out;
-    --web-action-type: page;
-    --web-action-target: CONTACT.html;
-    cursor: pointer;
-    text-align: left;
-    font-family: Hiragino Kaku Gothic ProN;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    color: rgba(255,255,255,1);
-}
-#footer-insta {
-    border: 0;
-    left: 1500px;
-    top: 7361px;
-    /* position: absolute; */
-    overflow: visible;
-    width: 93px;
-    white-space: nowrap;
-    text-align: left;
-    font-family: Hiragino Kaku Gothic ProN;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    color: rgba(255,255,255,1);
-}
-#footer-genre {
-    /* position: absolute; */
-    width: 15px;
-    height: 125px;
-    left: 1392px;
-    top: 7306px;
-    overflow: visible;
-    --web-animation: fadein 0.30000001192092896s ease-out;
-    --web-action-type: page;
-    --web-action-target: .html;
-    cursor: pointer;
-}
-#footer-genre-i {
-    border: 0;
-    left: 0px;
-    top: 0px;
-    /* position: absolute; */
-    overflow: visible;
-    width: 16px;
-    white-space: nowrap;
-    text-align: left;
-    font-family: Hiragino Kaku Gothic ProN;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    color: rgba(255,255,255,1);
-}
-#footer-genre-shoku {
-    border: 0;
-    left: 0px;
-    top: 55px;
-    /* position: absolute; */
-    overflow: visible;
-    width: 16px;
-    white-space: nowrap;
-    text-align: left;
-    font-family: Hiragino Kaku Gothic ProN;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    color: rgba(255,255,255,1);
-}
-#footer-genre-ju {
-    border: 0;
-    left: 0px;
-    top: 110px;
-    /* position: absolute; */
-    overflow: visible;
-    width: 16px;
-    white-space: nowrap;
-    text-align: left;
-    font-family: Hiragino Kaku Gothic ProN;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    color: rgba(255,255,255,1);
-}
-#footer-first {
-    fill: rgba(255,255,255,1);
-}
-.footer-first {
-    overflow: visible;
-    width: 10.885px;
-    height: 73.135px;
-    left: 329px;
-    top: 7332px;
-    transform: matrix(1,0,0,1,0,0);
-}
-#footer-c {
-    fill: rgba(255,255,255,1);
-}
-.footer-c {
-    overflow: visible;
-    width: 10.884px;
-    height: 73.135px;
-    left: 694.427px;
-    top: 7332px;
-    transform: matrix(1,0,0,1,0,0);
-}
-#footer-o {
-    fill: rgba(255,255,255,1);
-}
-.footer-o {
-    overflow: visible;
-    width: 41.194px;
-    height: 48.174px;
-    left: 363.727px;
-    top: 7344.476px;
-    transform: matrix(1,0,0,1,0,0);
-}
-#footer-r {
-    fill: rgba(255,255,255,1);
-}
-.footer-r {
-    overflow: visible;
-    width: 48.175px;
-    height: 48.175px;
-    left: 414.94px;
-    top: 7344.475px;
-    transform: matrix(1,0,0,1,0,0);
-}
-#footer-v {
-    fill: rgba(255,255,255,1);
-}
-.footer-v {
-    overflow: visible;
-    width: 43.558px;
-    height: 45.824px;
-    left: 523.743px;
-    top: 7345.661px;
-    transform: matrix(1,0,0,1,0,0);
-}
-#footer-u {
-    fill: rgba(255,255,255,1);
-}
-.footer-u {
-    overflow: visible;
-    width: 36.892px;
-    height: 46.99px;
-    left: 581.062px;
-    top: 7345.66px;
-    transform: matrix(1,0,0,1,0,0);
-}
-#footer-s {
-    fill: rgba(255,255,255,1);
-}
-.footer-s {
-    overflow: visible;
-    width: 33.852px;
-    height: 48.175px;
-    left: 633.49px;
-    top: 7344.475px;
-    transform: matrix(1,0,0,1,0,0);
-}
-#footer-end {
-    fill: rgba(255,255,255,1);
-}
-.footer-end {
-    overflow: visible;
-    width: 33.568px;
-    height: 45.824px;
-    left: 477.72px;
-    top: 7345.66px;
-    transform: matrix(1,0,0,1,0,0);
-}
-#genre-i-img {
-    width: 34%;
-    left: 0px;
-    top: 0px;
-    overflow: visible;
-    z-index: 1;
-}
-#genre-shoku-img {
-    width: 34%;
-    left: 34%;
-    top: 0px;
-    overflow: visible;
-    z-index: 1;
-}
-#genre-ju-img {
-    width: 34%;
-    right: 0px;
-    top: 0px;
-    overflow: visible;
-    z-index: 1;
-}
-#genre-i {
-    position: absolute;
-    width: 34%;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    height: 118px;
-    left: 0;
-    /* top: 355px; */
-    overflow: visible;
-    z-index: 1;
-}
-#genre-i-en {
-    border: 0;
-    top: 56px;
-    position: relative;
-    overflow: visible;
-    width: 100%;
-    text-align: center;
-    white-space: nowrap;
-    text-align: center;
-    font-family: Hiragino Kaku Gothic ProN;
-    font-style: normal;
-    font-weight: normal;
-    font-size: clamp(10px, 5vw, 15px);
-    color: rgba(255, 255, 255, 1);
-    z-index: 1;
-}
-#genre-i-jp {
-    border: 0;
-    position: absolute;
-    overflow: visible;
-    width: 100%;
-    text-align: center;
-    white-space: nowrap;
-    text-align: center;
-    font-family: Heisei Mincho Std;
-    font-style: normal;
-    font-weight: normal;
-    font-size: clamp(10px, 6vw, 70px);
-    color: rgba(255,255,255,1);
-    z-index: 1;
-}
-#genre-shoku {
-    position: absolute;
-    width: 34%;
-    left: 33%;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    height: 118px;
-    /* top: 355px; */
-    overflow: visible;
-    z-index: 1;
-}
-#genre-shoku-en {
-    border: 0;
-    top: 56px;
-    position: relative;
-    overflow: visible;
-    width: 100%;
-    text-align: center;
-    white-space: nowrap;
-    text-align: center;
-    font-family: Hiragino Kaku Gothic ProN;
-    font-style: normal;
-    font-weight: normal;
-    font-size: clamp(10px, 5vw, 15px);
-    color: rgba(255, 255, 255, 1);
-    z-index: 1;
-}
-#genre-shoku-jp {
-    border: 0;
-    position: absolute;
-    overflow: visible;
-    width: 100%;
-    text-align: center;
-    white-space: nowrap;
-    text-align: center;
-    font-family: Heisei Mincho Std;
-    font-style: normal;
-    font-weight: normal;
-    font-size: clamp(10px, 6vw, 70px);
-    color: rgba(255,255,255,1);
-    z-index: 1;
-}
-#genre-ju {
-    position: absolute;
-    width: 34%;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    height: 118px;
-    right: 0px;
-    /* top: 355px; */
-    overflow: visible;
-    z-index: 1;
-}
-#genre-ju-en {
-    border: 0;
-    top: 56px;
-    position: relative;
-    overflow: visible;
-    width: 100%;
-    text-align: center;
-    white-space: nowrap;
-    text-align: center;
-    font-family: Hiragino Kaku Gothic ProN;
-    font-style: normal;
-    font-weight: normal;
-    font-size: clamp(10px, 5vw, 15px);
-    color: rgba(255, 255, 255, 1);
-    z-index: 1;
-}
-#genre-ju-jp {
-    border: 0;
-    /* left: 94px; */
-    /* top: 97px; */
-    position: absolute;
-    overflow: visible;
-    width: 100%;
-    text-align: center;
-    white-space: nowrap;
-    text-align: center;
-    font-family: Heisei Mincho Std;
-    font-style: normal;
-    font-weight: normal;
-    font-size: clamp(10px, 6vw, 70px);
-    color: rgba(255,255,255,1);
-    z-index: 1;
-}
-#mission-text {
-    border: 0;
-    left: 492px;
-    top: 6169px;
-    overflow: visible;
-    width: 80%;
-    line-height: 1;
-    line-height: 2;
-    text-align: center;
-    font-family: Hiragino Kaku Gothic ProN;
-    font-style: normal;
-    font-weight: normal;
-    font-size: clamp(8px, 2vw, 70px);
-    color: rgba(255, 255, 255, 1);
-    margin: 20px;
-    z-index: 1;
-}
-#studio {
-    width: 80%;
-    overflow: visible;
-    z-index: 1;
-}
-#mission-title {
-    border: 0;
-    left: 734px;
-    top: 6043px;
-    /* position: absolute; */
-    overflow: visible;
-    width: 453px;
-    white-space: nowrap;
-    text-align: center;
-    font-family: Heisei Mincho Std;
-    font-style: normal;
-    font-weight: normal;
-    font-size: clamp(36px, 9vw, 70px);
-    color: rgba(255,255,255,1);
-    z-index: 1;
-}
-#menu-insta-favicon, #footer-insta-favicon {
-    display: none;
-}
-
-
+/* for SP */
 @media (max-width: 797px) {
   .about-circle {
     display: none;
@@ -1226,9 +552,6 @@ font-size: clamp(10px, 5vw, 70px);
   .about-graphics-items-row2 {
         display: flex;
         flex-direction: column-reverse;
-        flex-wrap: nowrap;
-        align-content: center;
-        justify-content: center;
         align-items: center;
   }
     .x-icon, .x-icon2 {
@@ -1247,17 +570,17 @@ font-size: clamp(10px, 5vw, 70px);
         align-items: center;
         flex-direction: column;
         display: flex;
-        }
+    }
     .genre-texts {
         align-content: flex-start;
         align-items: flex-start;
         flex-direction: column;
         display: flex;
-            position: absolute;
-    top: 0px;
-            width: -webkit-fill-available;
+        position: absolute;
+        top: 0px;
+        width: -webkit-fill-available;
     }
-    #genre-i-img, #genre-shoku-img, #genre-ju-img {
+    .genre-img {
         width: 100%;
         height: 180px;
         left: 0px;
@@ -1268,17 +591,20 @@ font-size: clamp(10px, 5vw, 70px);
     #genre-i-img, #genre-ju-img {
         object-position: center 85%;
     }
-    #genre-i, #genre-shoku, #genre-ju {
-    position: relative;
-        left: 4%;
+   .genre-text {
+        position: relative; 
         height: 180px;
         top: 5rem;
-        width: 50%;
         display: flex;
-        justify-content: center;
-        flex-direction: column;
         align-content: center;
-        align-items: center;
+        cursor: pointer;
+    }
+    #genre-shoku {
+        left: 0px;
+    }
+    #genre-ju {
+        position: relative;
+        left: 0px;
     }
     .mission {
         padding-top: 0px;
@@ -1319,14 +645,14 @@ font-size: clamp(10px, 5vw, 70px);
     }
     #footer-logo {
         padding-bottom: 18px;
-
+        width: 50%;
     }
-    #footer-top, #footer-about, #footer-phil, #footer-genre-i,#footer-genre-shoku, #footer-genre-ju, #footer-contact, #footer-insta  {
+    .footer-other-item  {
         font-size: 11px;
         width: 34%;
         text-align: center;
     }
-    #aaj, #footer-insta  {
+    #menu-insta, #footer-insta  {
         display: none; 
     }
     #menu-insta-favicon, #footer-insta-favicon {
@@ -1340,7 +666,6 @@ font-size: clamp(10px, 5vw, 70px);
     }
     #footer-genre {
         display: flex;
-        /* position: absolute; */
         width: 100%;
         justify-content: space-between;
         height: auto;
@@ -1353,7 +678,6 @@ font-size: clamp(10px, 5vw, 70px);
         align-items: center;
     }
     .about-graphics-items {
-        margin: 81px 10px;
         position: relative;
     }
     #about-ju {
@@ -1381,7 +705,7 @@ font-size: clamp(10px, 5vw, 70px);
         flex-direction: column;
         padding-left: 10px;
     }
-    #aaf, #aag, #aah, #aal, #aam, #aan, #aai, #aaj {
+    #menu-top, #menu-about, #menu-phil, #menu-i, #menu-shoku, #menu-ju, #menu-contact, #menu-insta {
         font-size: 15px;
         line-height: 3;
     }

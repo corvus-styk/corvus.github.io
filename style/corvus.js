@@ -9,7 +9,6 @@ function goTo(url) {
 
   window.addEventListener('DOMContentLoaded', () => {
     const wrapper = document.getElementsByClassName('about-images')[0];
-	// console.log(wrapper)
     const images = wrapper.querySelectorAll('img');
 
     let maxBottom = 0;
@@ -28,7 +27,7 @@ function goTo(url) {
 
   document.addEventListener('DOMContentLoaded', () => {
 const menu = document.getElementById('menu');
-const closeBtn = document.getElementById('aao');
+const closeBtn = document.getElementById('close-icon');
 const navMenu = document.getElementById('nav-menu');
 
 // 開く
