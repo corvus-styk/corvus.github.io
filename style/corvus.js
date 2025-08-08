@@ -9,7 +9,6 @@ function goTo(url) {
 
   window.addEventListener('DOMContentLoaded', () => {
     const wrapper = document.getElementsByClassName('about-images')[0];
-	// console.log(wrapper)
     const images = wrapper.querySelectorAll('img');
 
     let maxBottom = 0;
